@@ -1,0 +1,106 @@
+<!-- Page Breadcumb -->
+<section class="pageBreadcumb pageBreadcumb--style1 position-relative" style="background-image: url(assets/image/home/about-yemen.jpg)">
+
+
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="pageTitle text-center">
+                  <h2 class="pageTitle__heading text-white text-uppercase mb-25">{{'News'|translate}}</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">{{'Home'|translate}}</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">{{'News Details'|translate}}</li>
+                      </ol>
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Page Breadcumb End -->
+
+<!-- top Destination starts -->
+<section class="trending pt-6 pb-0 bg-lgrey">
+  <div class="container mt-40">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="single-content">
+                  <div id="highlight" class="mb-4">
+                      <div class="single-full-title border-b mb-2 pb-2">
+                          <div class="">
+                              <h6 class="mb-1 title2 " [innerHTML]="newsDetails?.field_news_title"> </h6>
+
+                          </div>
+                      </div>
+
+                      <div class="description-images mb-4 text-center justify-content-center">
+                          <img src="{{baseUrl}}{{newsDetails?.field_news_article_image}}" alt="" style="max-width: 40%; max-height:40%;" class=" rounded">
+                      </div>
+
+                      <div class="description mb-2">
+                          <h5> {{'details' | translate}}</h5>
+                          <p [innerHTML]="newsDetails?.field_news_details_f"></p>
+                          <p class="mb-0"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- top Destination ends -->
+
+
+<!-- top News starts -->
+<section class="trending pt-6 pb-8  bg-lgrey">
+<div class="container">
+    <div class="section-title mb-6 w-75 mx-auto text-center">
+        <h2 class="mb-1 title2" > {{'latest_news' | translate}}</h2>
+    </div>
+    <div class="row">
+       <div class="col-lg-12">
+              <div class="row">
+                <app-news-card class="col-12 col-lg-4 mb-5" *ngFor="let news of threeNews  let i = index" [title]="news?.field_news_title"
+                [content]="news?.field_news_summary.slice(0, 190) + (news?.field_news_summary.length > 190 ? '...' : '')"
+                [imageUrl]="baseUrl+news?.field_news_images" [targetUrl]="'/news-detailes/'+ i "
+                [date]="news?.field_news_data"
+                data-aos="fade-up" [attr.data-aos-delay]="150*(i+1)"></app-news-card>
+<!--                 
+                <ng-container *ngFor="let news of threeNews  let i = index" >
+                  <div class="col-12 col-lg-4 col-md-6 col-sm-6 col-xl-4 col-xxl-4 pb-5">
+                    <a [routerLink]="['/news-detailes/', i ]">
+                      <div class="trend-item rounded box-shadow">
+                          <div class="trend-image position-relative" style="background-image: url({{baseUrl}}{{news?.field_news_images}}); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+                              <div class="color-overlay"></div>
+                          </div>
+                          <div class="trend-content p-4 pt-5 position-relative">
+                              <div class="trend-meta bg-theme white px-3 py-2 rounded">
+                                  <div class="entry-author">
+                                      <i class="icon-calendar"></i>
+                                      <span class="fw-bold" [innerHTML]="news?.field_news_data"> </span>
+                                  </div>
+                              </div>
+                              <h6 class="mb-1" [innerHTML]="news?.title.slice(0, 70) + (news?.title.length > 70 ? '...' : '')" ></h6>
+                              <p class=" border-b pb-2 mb-2"  [innerHTML]="news?.field_news_summary.slice(0, 190) + (news?.field_news_summary.length > 190 ? '...' : '')"></p>
+                              <div class="entry-meta">
+                                  <div class="entry-author d-flex align-items-center">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </a>
+                   </div>
+                </ng-container> -->
+                  <div class="col-lg-12">
+                      <div class="text-center">
+                          <a [routerLink]="['/news-events']" class="nir-btn">{{'View_more'|translate}}</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
+</section>
+

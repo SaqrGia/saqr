@@ -1,0 +1,135 @@
+{
+  "TITLE" : "Welcome to the Google ",
+
+  "Why_Yemen" : "Why Yemen?",
+  "About_Yemen" : "About Yemen",
+  "Economic_profiles" : "Economic features",
+
+  "Our_Services" : "Our Services",
+  "Service_package" : "Service package",
+  "Opportunities" : "Opportunities",
+  "All_Opportunities" : "All Opportunities",
+  "Investment_Opportunities" : "Investment opportunities",
+  "Sectors" : "Sectors",
+  "All_Sectors" :"All Sectors",
+  "All_Cities" : "ِAll Cities ",
+  "Cities" : "governorate",
+  "Initiatives" : "Initiatives",
+
+  "Investor_Service_Center" : "Investor Service Center",
+  "Agency_offices" : "Agency offices",
+  "Oss" : "Oss",
+  "Economic_zones" : "Economic zones",
+  "All_economic_zone" : "All economic zone",
+
+  "Resources" : "Resources",
+  "Investment_Guide" : "Investment Guide",
+  "Incentives_and_Schemes" : "Incentives and Schemes",
+ 
+  "view-Opportunity":"View Opportunity",
+  "Reports_and_Research" : "Reports and Research",
+
+
+  "Media_Center" : "Media Center",
+  "News_and_Events" : "News and Events",
+  "Virtual_library" : "Virtual library",
+  "Common_questions" : "Common questions",
+
+  "Contact_us" : "Contact us",
+
+  "Welcome" : "Welcome",
+
+  "Home" : "Home",
+  "Opportunities_sector" : "sector",
+  "Opportunities_Cities" : "governorate",
+  "Opportunities_cost" : "cost",
+  "Opportunities_economic_zone" : "field_economic_zone",
+
+  
+  "Show More" : "Show More ",
+  "Show Less" : "Show Less ",
+  "Read More" : "Read more",
+  "Read Less" : "Read Less",
+
+  "cost" : "Investment cost",
+  "jobs" : "jobs",
+
+  "workforce" : "workforce ",
+
+
+
+  "work_hours" : "work hours",
+  "phone" : "phone",
+  "name" : "Name",
+  "email" : "Email",
+  "address" : "Address",
+  "website_name" : "General Authority for Investment",
+  "contact_us_describe" : "The General Authority for Investment provides support and assistance to investors in various fields and facilitates the necessary procedures for obtaining licenses and permits necessary to establish companies and economic projects.",
+  "inquiry" : "Have an inquiry؟",
+  "form" : "Please fill in the following.",
+  "subject" : "Subject",
+  "message" : "Your message ...",
+
+
+
+  "send" : "Send",
+  "main_center" : "Main Center",
+  "population" : "population",
+  "From" : "From",
+  "to" : "to",
+  "Search_now" : "Search Now",
+  "details" : "Details",
+  "Explore" : "Explore",
+  "about" : "About",
+  "contact_info" : "Contact information",
+  "latest_news" : "Latest news",
+  "sector_button" : "Explore sector opportunities",
+  "qrcode" : "Scan the code to reveal the amazing opportunity's location.",
+
+
+  "January": "JAN",
+  "February": "FEB",
+  "March": "MARCH",
+  "April": "April",
+  "May": "May",
+  "June": "June",
+  "July": "July",
+  "August": "Aug",
+  "September": "Sept",
+  "October": "Oct",
+  "November": "Nov",
+  "December": "Dec",
+
+  "txt_Copyright":"  &copy; All rights reserved <strong><span>GIA</span></strong>",
+  "OPPORTUNITIES": "Opportunities",
+   "Support": "Support",
+   "About_US":"ABOUT",
+   "News_Latter":"Mailing Newsletter",
+   "Subscribe": "Subscribe",
+
+   "YE-AB": "Abyan",
+   "YE-AD": "Aden",
+   "YE-AM": "Amran",
+   "YE-BA": "Al Bayda",
+   "YE-DA": "Dhale",
+   "YE-DH": "Dhamar",
+   "YE-HD": "Hadramaut",
+   "YE-HG": "Al Hudaydah",
+   "YE-HU": "Al Hudaydah",
+   "YE-IB": "Ibb",
+   "YE-JA": "Al Jawf",
+   "YE-LA": "Lahij",
+   "YE-MA": "Marib",
+   "YE-MR": "Mahrah",
+   "YE-MW": "Al Mahwit",
+   "YE-RA": "Raymah",
+   "YE-SA": "Sana'a",
+   "YE-SH": "Shabwah",
+   "YE-SN": "Sana‘a",
+   "YE-TA": "Taiz",
+   "YE-HJ": "Hajjah",
+   "YR-SD": "Saada",
+
+   "Opportunity" : "Opportunity",
+   "Total_Opportunities" : "Total Opportunities"
+}

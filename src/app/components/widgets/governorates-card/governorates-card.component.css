@@ -1,0 +1,212 @@
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card{
+    position: relative;
+    width: 315px;
+    height: 450px;
+    margin: 30px 0;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 4%), 0px 0px 6px 1px rgb(0 0 0 / 7%);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  }
+  .card-header{
+    position: relative;
+    height: 220px;
+    background-size: cover;
+    background-position: top;
+  }
+  .card-header:after{
+    content:'';
+    top: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(5,85,134), rgba(181,181,181, 0.1));
+  }
+  
+  .card-header-bar{
+    position: absolute;
+    top:0;
+    width: 100%;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0,0,0,0);
+    border: none;
+    overflow: hidden;
+  }
+  .card-header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(5, 85, 134, 0.5), rgba(181, 181, 181, 0.2));
+  }
+  .btn-message{
+    display: inline-block;
+    background: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077483/profile-card/images/message.svg) no-repeat;
+    width: 19.37px;
+    height: 16.99px;
+    margin-right:10px;
+    margin-top:10px;
+    float: right;
+  }
+  .btn-menu{
+    display: inline-block;
+    background: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077483/profile-card/images/menu.svg) no-repeat;
+    width: 19px;
+    height: 12.16px;
+    margin-left:10px;
+    margin-top:10px;
+    float: left;
+  }
+  
+  svg .polygon{
+    fill: #fff;
+  }
+  .card-header-slanted-edge{
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+    width: 100%;
+    right:0;
+    left:0;
+  }
+  
+  .btn-follow{
+    position: absolute;
+    top: -15px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(to left, #2D77C1, #68FAC2);
+    border-radius:100%;
+    box-shadow: 0 10px 15px rgba(110,221,235, .53);
+  }
+  
+  .btn-follow:after{
+    content: '';
+    position:absolute;
+    background: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/add.svg) no-repeat;
+    width:17px;
+    height: 17px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .card-body{
+    text-align:center;
+    padding-left: 10px;
+  }
+  
+  .name{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: #333;
+  }
+  
+  .job-title{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 5px;
+    color: #919191;
+  }
+  
+  .bio{
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+    margin: 10px auto;
+    line-height: 24px;
+  }
+  
+  .social-accounts img{
+    width: 15px;
+  }
+  
+  .social-accounts a{
+    margin-left: 10px;
+  }
+  .social-accounts a:first-child{
+    margin-left: 0;
+  }
+  
+  .card-footer{
+    position: absolute; /* Fixed card width/height */
+    background-color:white !important;
+    left: 0;
+    width: 100%;
+    bottom: 20px;
+  }
+  .stat{
+    box-sizing: border-box;
+    width: calc(100% / 3);
+    float: left;
+    color: #333;
+    text-align: center;
+    border-left: 1px solid #EBEBEB;
+  }
+  .stat .label{
+    color: rgb(121, 120, 120);
+    display: block;
+    font-weight: 700;
+    font-size:13px;
+    margin-top: 5px;
+  
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 11px 0px rgba(85, 83, 83, 0.3);
+  }
+  
+  .stat .value{
+    display: block;
+    font-weight: 700;
+    font-size:12px;
+    margin-top: 5px;
+  }
+  .value-container span {
+    margin-right: 12px;
+  }
+  .value:after {
+    content: attr(data-unit);
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 2px;
+  }
+  
+  .value-unit {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: -10px;
+  }
+  .card:hover .card-header {
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  

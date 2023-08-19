@@ -1,0 +1,60 @@
+
+<app-first-section
+[title]="virtualLibraryPage?.field_virtual_library_s1_title"
+[ImageUrl]="baseUrl+virtualLibraryPage?.field_virtual_library_s1_image"
+></app-first-section>
+
+<!-- Jobs Section Start -->
+<section class="job-section pt-100 pb-100">
+  <div class="container">
+      <div class="section-title text-center">
+          <h2 [innerHTML]="virtualLibraryPage?.field_virtual_library_s2_title"></h2>
+          <p [innerHTML]="virtualLibraryPage?.field_virtual_library_s2_descrip"></p>
+      </div>
+
+      <div class="row cards-container">
+        <app-pdf-download-card *ngFor="let info of itemList " [model]="info">
+            
+        </app-pdf-download-card>
+
+          <!-- <ng-container *ngFor="let info of virtualLibrary ">
+              <div class="col-sm-4">
+                  <div class="job-card">
+                      <div class="row align-items-center">
+                          <div class="col-lg-4">
+                              <div class="thumb-img">
+                                  <a type="button" href="{{baseUrl}}{{info.field_virtual_library_pdf}}">
+                                      <img src="assets/image/pdf-svgrepo-com.svg" alt="company logo">
+                                  </a>
+                              </div>
+                              <div>
+                                  <ul class="date">
+
+                                      <li>Invalidade On </li>
+                                      <li style="color: red;">{{info.field_virtual_library_date}}</li>
+
+                                  </ul>
+                              </div>
+                          </div>
+
+                          <div class="col-lg-8">
+                              <div class="job-info">
+                                  <h3>
+                                      <a [innerHTML]="info.field_virtual_library_name"></a>
+                                  </h3>
+                              </div>
+                              <div class="card-hover-a">
+                                  <p [innerHTML]="info.field_virtual_library_descriptio"></p>
+                              </div>
+                          </div>
+
+
+                      </div>
+                  </div>
+              </div>
+          </ng-container> -->
+
+      </div>
+  </div>
+</section>
+<!-- Jobs Section End -->

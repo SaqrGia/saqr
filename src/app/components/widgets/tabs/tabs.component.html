@@ -1,0 +1,42 @@
+
+
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container">
+
+        <div *ngIf="hasHead" class="section-title">
+          <h2 [innerHTML]="paragraphTitle"></h2>
+          <p [innerHTML]="paragraphContent"></p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-2">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item"  *ngFor="let tab of tabs; first as isFirst; index as index;" >
+                <a class="nav-link" [class.active]="isFirst"
+                [class.show]="isFirst"  data-bs-toggle="tab"  
+                [href]="'#tab-' +(index+1)" [innerHTML]="tab.title" ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-10"  >
+            <div class="tab-content scrollable-element" >
+              <div class="tab-pane"   *ngFor="let tab of tabs; first as isFirst; index as index; odd as isOdd" [class.active]="isFirst"
+              [class.show]="isFirst" [id]="'tab-' +(index+1)">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details  order-lg-1" [class.order-2]="isOdd" [class.order-1]="!isOdd">
+                    <h3 [innerHTML]="tab.title"></h3>
+                    <div  [innerHTML]="tab.content" ></div>
+                  </div>
+                  <div class="col-lg-4 text-center  order-lg-2" [class.order-1]="isOdd" [class.order-2]="!isOdd">
+                    <img [src]="tab.imageUrl" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->

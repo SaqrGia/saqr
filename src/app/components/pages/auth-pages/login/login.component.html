@@ -1,0 +1,79 @@
+<div class="container-xxl">
+  <div class="authentication-wrapper authentication-basic container-p-y">
+    <div class="authentication-inner">
+      <!-- Register -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Logo -->
+          <div class="app-brand justify-content-center">
+            <a href="#" class="app-brand-link gap-2">
+              <span class="app-brand-logo demo">
+                <img src="assets/image/logos/logo-gia.png" style=" height:80px; width: 110px;"  />
+              </span>
+
+            </a>
+          </div>
+          <!-- /Logo -->
+          <h5 class="mb-2">Welcome to Yemen invest  👋</h5>
+          <p class="mb-4">Please sign-in to your account and start the adventure</p>
+
+          <form [formGroup]="loginForm" >
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+              formControlName="EMail"
+                type="email"
+                class="form-control"
+                id="email"
+                name="email-username"
+                placeholder="Enter your email"
+                autofocus
+              />
+              <small *ngIf="loginForm.controls['EMail'].dirty && loginForm.hasError('required','EMail')" class="text-danger">*Email is required</small>
+            </div>
+            <div class="mb-3 form-password-toggle">
+              <div class="d-flex justify-content-between">
+                <label class="form-label" for="password">Password</label>
+                <a >
+                  <small>Forgot Password?</small>
+                </a>
+              </div>
+              <div class="input-group input-group-merge " [class.error]="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')" >
+                <input
+                formControlName="Password"
+                  [type]="type"
+
+                  class="form-control"
+
+                  placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+
+
+                />
+                <span (click)="hideShowPass()" class="input-group-text cursor-pointer bx {{eyeIcon}}"></span>
+              </div>
+              <small *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')" class="text-danger">*Password is required</small>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="remember-me" />
+                <label class="form-check-label" for="remember-me"> Remember Me </label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <button (click)="reloadPage()"  (click)="onLogin()" class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+            </div>
+          </form>
+
+          <p class="text-center">
+            <span>New on Yemen Invest </span>
+            <a id="signup" routerLink="/signup">
+              <span>Create an account</span>
+            </a>
+          </p>
+        </div>
+      </div>
+      <!-- /Register -->
+    </div>
+  </div>
+</div>

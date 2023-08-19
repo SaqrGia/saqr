@@ -1,0 +1,126 @@
+<!-- footer -->
+<footer class="footer footer--bg footer--styleOne pt-0 pb-10">
+    <!-- <img src="assets/image/shapes/footerShape2.png" alt="Gia Shape" class="footer__shape"> -->
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="footer__logo">
+                    <img src="assets/image/logos/Logo gia.png" alt="Gia Logo" class="footer__logo__image">
+                </div>
+            </div>
+            <div class="col">
+                <div class="footer__social itSocial" [style]="getStyle_footer__social()">
+                    <ul>
+                        <li>
+                            <a class="facebook" href="https://ar-ar.facebook.com/people/General-Investment-Authority/100064892942444" rel="nofollow">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a class="twitter" href="#" rel="nofollow">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="instagram" href="#" rel="nofollow">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="linkedin" href="#" rel="nofollow">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pinterest" href="#" rel="nofollow">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr class="footer__line" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer__middle pt-65 pb-35">
+                <div class="row justify-content-between">
+                    <div class="col-lg-2 col-md-4 mb-30">
+                        <div class="footer__widget">
+                            <div class="footer__title">
+                                <h2 class="footer__heading text-uppercase text-white">{{'OPPORTUNITIES' | translate }}</h2>
+                            </div>
+                            <div class="footer__menu">
+                                <ul>
+                                    <li><a [routerLink]="['opportunities']">{{'All_Opportunities' | translate }}</a></li>
+                                    <li><a [routerLink]="['sectors']">{{'Sectors' | translate }}</a></li>
+                                    <li><a [routerLink]="['governorates']">{{'Cities' | translate }}</a></li>
+                                    <li><a [routerLink]="['virtual-library']">{{'Virtual_library' | translate }}</a></li>
+                                    <li><a [routerLink]="['reports']">{{'Reports_and_Research' | translate }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 mb-30">
+                        <div class="footer__widget">
+                            <div class="footer__title">
+                                <h2 class="footer__heading text-uppercase text-white">{{'Support' | translate }}</h2>
+                            </div>
+                            <div class="footer__menu">
+                                <ul>
+                                    <li><a [routerLink]="['news-events']">{{'News_and_Events' | translate }}</a></li>
+                                    <li><a [routerLink]="['service-package']">{{ 'Service_package' | translate }}</a></li>
+                                    <!-- <li><a [routerLink]="['initiatives']">{{'Initiatives' | translate }}</a> </li> -->
+                                    <!-- <li><a [routerLink]="['oss']">{{'Oss' | translate }}</a></li> -->
+                                    <li><a [routerLink]="['agency-offices']">{{'Agency_offices' | translate }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 mb-30">
+                        <div class="footer__widget">
+                            <div class="footer__title">
+                                <h2 class="footer__heading text-uppercase text-white">{{'About_US' | translate }}</h2>
+                            </div>
+                            <div class="footer__menu">
+                                <ul>
+                                    <li><a [routerLink]="['home']">{{'Main' | translate }}</a></li>
+                                    <li><a [routerLink]="['about-yemen']">{{ 'About_Yemen' | translate }}</a></li>
+                                    <li><a [routerLink]="['contact-us']">{{'Contact_us' | translate }}</a></li>
+                                    <li><a [routerLink]="['common-questions']">{{'Common_questions' | translate }}</a></li>
+                                    <li><a [routerLink]="['investment-guide']">{{'Investment_Guide' | translate }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 mb-30" [style]="getStyle_footer__newsletter__button()">
+                        <form action="#" method="post" class="footer__newsletter">
+                            <div class="footer__title">
+                                <h2 class="footer__heading text-uppercase text-white">{{'News_Latter' | translate }}</h2>
+                            </div>
+                            <div class="footer__newsletter__formGroup mb-20">
+                                <input type="text" class="footer__newsletter__input" placeholder="Enter mail">
+                                <input class="footer__newsletter__button {{footer_button}}" type="button" [value]="'Subscribe'|translate">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer__bottom">
+                <div class="row">
+                    <div class="col-12">
+                        <hr class="footer__line">
+                    </div>
+                    <div class="col mb-20">
+                        <div class="footer__copyright pt-20">
+                            <p class="footer__copyright__text mb-0" [innerHTML]="'txt_Copyright' | translate "></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

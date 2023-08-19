@@ -1,0 +1,306 @@
+<div class="demo-cont">
+  <!-- slider start -->
+  <div class="fnc-slider example-slider">
+    <div class="fnc-slider__slides">
+      <!-- slide start -->
+      <div class="fnc-slide m--blend-blue m--active-slide">
+        <div class="fnc-slide__inner" style="background-image: url({{baseUrl}}{{slider?.field_image_1_slide}});">
+          <div class="fnc-slide__mask">
+            <div class="fnc-slide__mask-inner"
+              style="background-image: url({{baseUrl}}{{slider?.field_image_1_slide}});"></div>
+          </div>
+          <div class="fnc-slide__content">
+            <button type="button" [routerLink]="[slider?.field_url]" class="fnc-slide__action-btn">
+            <h5 class="fnc-slide__heading">
+              <div class="fnc-slide__heading-line font-slider pb-1">
+                <span [innerHTML]="slider?.field_slide_header"> </span>
+              </div>
+              <div class="fnc-slide__heading-line">
+                <br><span [innerHTML]="slider?.field_slider_description_"></span>
+              </div>
+            </h5>
+          </button>
+
+            
+          </div>
+        </div>
+      </div>
+      <!-- slide end -->
+      <!-- slide start -->
+      <div class="fnc-slide  m--blend-red">
+        <div class="fnc-slide__inner" style="background-image: url({{baseUrl}}{{slider?.field_image_slide_2}});">
+          <div class="fnc-slide__mask">
+            <div class="fnc-slide__mask-inner"
+              style="background-image: url({{baseUrl}}{{slider?.field_image_slide_2}});"></div>
+          </div>
+          <div class="fnc-slide__content">
+            <button type="button" [routerLink]="[slider?.field_url_2]" class="fnc-slide__action-btn">
+            <h5 class="fnc-slide__heading">
+              <div class="fnc-slide__heading-line font-slider  pb-1">
+                <span [innerHTML]="slider?.field_slide_header2"> </span>
+              </div>
+              <div class="fnc-slide__heading-line">
+                <br><span [innerHTML]="slider?.field_slider_description_2"></span>
+              </div>
+            </h5>
+           
+       
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- slide end -->
+      <!-- slide start -->
+      <div class="fnc-slide m--blend-dark">
+        <div class="fnc-slide__inner" style="background-image: url({{baseUrl}}{{slider?.field_image_slide_3}});">
+          <div class="fnc-slide__mask">
+            <div class="fnc-slide__mask-inner"
+              style="background-image: url({{baseUrl}}{{slider?.field_image_slide_3}});"></div>
+          </div>
+          <div class="fnc-slide__content">
+            <button type="button" [routerLink]="[slider?.field_url_3]" class="fnc-slide__action-btn">
+            <h2 class="fnc-slide__heading">
+              <div class="fnc-slide__heading-line font-slider  pb-1">
+                <span [innerHTML]="slider?.field_slide_header_3"></span>
+              </div>
+              <div class="fnc-slide__heading-line">
+                <br> <span [innerHTML]="slider?.field_slider_description_3"></span>
+              </div>
+            </h2>
+     
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- slide end -->
+      <!-- slide start -->
+      <div class="fnc-slide m--blend-green">
+        <div class="fnc-slide__inner" style="background-image: url({{baseUrl}}{{slider?.field_image_slide_4}});">
+          <div class="fnc-slide__mask">
+            <div class="fnc-slide__mask-inner"
+              style="background-image: url({{baseUrl}}{{slider?.field_image_slide_4}});"></div>
+          </div>
+          <div class="fnc-slide__content">
+            <button type="button" [routerLink]="[slider?.field_url_4]" class="fnc-slide__action-btn">
+            <h2 class="fnc-slide__heading">
+              <div class="fnc-slide__heading-line font-slider pb-1">
+                <span [innerHTML]="slider?.field_slide_header_4"></span>
+              </div>
+              <div class="fnc-slide__heading-line">
+                <br> <span [innerHTML]="slider?.field_slider_description_4"></span>
+              </div>
+            </h2>
+
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- slide end -->
+    </div>
+    <nav class="fnc-nav">
+      <div class="fnc-nav__bgs">
+        <div class="fnc-nav__bg m--navbg-blue"></div>
+        <div class="fnc-nav__bg m--navbg-red"></div>
+        <div class="fnc-nav__bg m--navbg-dark"></div>
+        <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
+
+      </div>
+      <div class="fnc-nav__controls">
+        <button class="fnc-nav__control" [innerHTML]="slider?.field_bottom_title">
+
+          <span class="fnc-nav__control-progress"></span>
+        </button>
+        <button class="fnc-nav__control" [innerHTML]="slider?.field_bottom_title_2">
+
+          <span class="fnc-nav__control-progress"></span>
+        </button>
+
+        <button class="fnc-nav__control" [innerHTML]="slider?.field_bottom_title_3">
+
+          <span class="fnc-nav__control-progress"></span>
+        </button>
+        <button class="fnc-nav__control" [innerHTML]="slider?.field_bottom_title_4">
+
+          <span class="fnc-nav__control-progress"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <!-- slider end -->
+
+</div>
+
+<section class="about-us pt-5 pb-3" data-aos="fade-up" >
+  <div class="container" data-aos="zoom-ou" data-aos-delay="300">
+    <div class="about-image-box">
+      <div class="row d-flex align-items-center justify-content-between">
+        <div class="col-lg-4 p-5" style="order: 2;">
+          <img src="{{baseUrl}}{{homePageDetails?.field_home_s3_front_image}}" alt="" style="
+                border-radius: 10%;">
+        </div>
+        <div class="col-lg-7  ps-4" style="order: 1;">
+          <div class="about-content mb-1">
+
+            <h3 class="border-b mb-2 pb-1 primary-color" [innerHTML]="homePageDetails?.field_home_s3_title"></h3>
+            <p class="border-b  pb-2 fs-5" style="font-weight: 500;" [innerHTML]=" homePageDetails?.field_home_s3_des"></p>
+            <div class="entry-button d-flex justify-content-end mb-2">
+              <a [routerLink]="['/about-invest-in-yemen']" class="more-btn" [innerHTML]="'[ + ' + ('Show More'|translate)+' ]'"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Overview ends -->
+
+
+<div class="pb-5 pt-5 overflow-hidden">
+
+
+<app-services-box [header]="homePageDetails?.field_home_s2_title"
+  [decryption]="homePageDetails?.field_home_s2_description" 
+  [title1]="homePageDetails?.field_home_s2_box_1_title_"
+  [title2]="homePageDetails?.field_home_s2_box_2_title" [title3]="homePageDetails?.field_home_s2_box_3_title"
+  [title4]="homePageDetails?.field_home_s2_box_4_title" [icon1]="homePageDetails?.field_home_s2_box_1_icon"
+  [icon2]="homePageDetails?.field_home_s2_box_2_icon" [icon3]="homePageDetails?.field_home_s2_box_3_icon"
+  [icon4]="homePageDetails?.field_home_s2_box_4_icon"
+  [details1]="homePageDetails?.field_home_s2_box_1_des.slice(0, 120) + (homePageDetails?.field_home_s2_box_1_des.length > 120 ? '...' : '')"
+  [details2]="homePageDetails?.field_home_s2_box_2_des.slice(0, 120) + (homePageDetails?.field_home_s2_box_2_des.length > 120 ? '...' : '')"
+  [details3]="homePageDetails?.field_home_s2_box_3_des.slice(0, 120) + (homePageDetails?.field_home_s2_box_3_des.length > 120 ? '...' : '')"
+  [details4]="homePageDetails?.field_home_s2_box_4_des.slice(0, 120) + (homePageDetails?.field_home_s2_box_4_des.length > 120 ? '...' : '')"></app-services-box>
+
+</div>
+<!-- Sectors starts -->
+<section class="py-5">
+  <div class="row justify-content-center text-center pt-4">
+    <div class="col-md-10 col-lg-10">
+      <div class="header-section ">
+        <h2 class="title2 mb-0" [innerHTML]=" homePageDetails?.field_home_our_sectors"></h2>
+      </div>
+    </div>
+  </div>
+  <app-sectors-wheel></app-sectors-wheel>
+</section>
+<!-- Sectors ends -->
+
+
+<!-- map section -->
+<section class="pt-3 bg-white">
+  <div class="row justify-content-center text-center m-0 pt-3">
+    <div class="col-md-10 col-lg-10">
+      <div class="header-section ">
+        <h2 class="title2" [innerHTML]=" 'Economic_zones' | translate" ></h2>
+      </div>
+    </div>
+  </div>
+   <!-- <app-map-component></app-map-component>  -->
+  <app-yemen-map></app-yemen-map>
+</section>
+<!-- map section end -->
+
+<!-- opertinities starts -->
+<section class="trending-podcast-section section-padding">
+  <div class="container">
+
+    <div class="row justify-content-center text-center pt-5">
+      <div class="col-md-10 col-lg-10">
+        <div class="header-section ">
+          <h2 class="title2" [innerHTML]=" homePageDetails?.field_home_s5_our_opportunities"></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+
+      <ng-container *ngIf="forOpportunities && forOpportunities?.length > 0">
+        <div id="op-container" class="row">
+
+          <ng-container *ngFor="let opportunity  of forOpportunities  let i2 = index " >
+            <div class="col-xl-3 col-lg-4 col-m-4 col-sm-6 mb-6 mb-lg-0 card-center " data-aos="flip-right"  [attr.data-aos-delay]="(i2*100)+100"  >
+                <app-opportunities [opportunityName]="opportunity?.field_opportunity_name"
+                  [OpportunityCost]="opportunity?.field_opportunity_cost_as_string"
+                  [OpportunityCity]="opportunity?.field_governorate" [OpportunitySector]="opportunity?.field_sector"
+                  [field_opportunities_details]="opportunity?.field_opportunities_details"
+                  [OpportunityCount]="opportunity?.field_number_of_opportunities"
+                  [haveDownload]="opportunity?.field_detail_file"
+                  [downloadUrl]="baseUrl + opportunity?.field_detail_file"
+                  [JobsOpportunities]="opportunity?.field_opportunities_employment"
+                  class="d-flex justify-content-center"
+                  >
+
+                </app-opportunities>
+            </div>
+
+          </ng-container>
+        </div>
+      </ng-container>
+      <p *ngIf="forOpportunities?.length === 0">No results found.</p>
+
+    </div>
+
+    <div class="entry-button d-flex align-items-center mb-2">
+      <a [routerLink]="['/opportunities']" class="nir-btn">{{'View_more' | translate}}</a>
+    </div>
+  </div>
+</section>
+<!-- opertinities ends -->
+
+
+<!-- top News starts -->
+<section class="trending pt-4 pb-4 bg-lgrey bg-white">
+  <div class="container">
+    <div class="section-title mb-4 w-75 mx-auto text-center">
+
+      <div class="row justify-content-center text-center pt-3">
+        <div class="col-md-10 col-lg-10">
+          <div class="header-section ">
+            <h2 class="title2 " data-aos="fade-right" [innerHTML]=" homePageDetails?.field_home_s_6_latest_news"></h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row p-5" >
+      <app-news-card class="col-12 col-lg-4 mb-5" *ngFor="let news of threeNews  let i = index" [title]="news?.field_news_title"
+        [content]="news?.field_news_summary.slice(0, 190) + (news?.field_news_summary.length > 190 ? '...' : '')"
+        [imageUrl]="baseUrl+news?.field_news_images" [targetUrl]="'/news-detailes/'+ i "
+        [date]="news?.field_news_data"
+        data-aos="fade-up" [attr.data-aos-delay]="150*(i+1)"></app-news-card>
+
+
+
+    </div>
+  </div>
+</section>
+<section class="trending pt-4 pb-4 bg-lgrey" >
+  <div class="mx-3">
+    <div class="section-title mb-4 w-75 mx-auto text-center">
+
+      <div class="row justify-content-center text-center pt-3">
+        <div class="col-md-10 col-lg-10">
+          <div class="header-section ">
+            <h2 class="title2" [innerHTML]="'Agency_offices' | translate " data-aos="fade-left"></h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row p-1" >
+      <ng-container
+        *ngFor="let agencyInfo of agencyOffice | paginate: { itemsPerPage: 4, currentPage: 1 }  index as i;">
+        <div class="col-lg-3 pt-2 pb-5">
+          <app-agency-office-card [image]="baseUrl+agencyInfo?.field_agency_offices_section_1_i"
+            [description]="agencyInfo?.field_agency_office_details" field_agency_office_details
+            [title]="agencyInfo?.field_agency_offices_section_1_t" [email]="agencyInfo?.field_agency_offices_email"
+            [phone]="agencyInfo?.field_agency_offices_phone" [fax]="agencyInfo?.field_agency_offices_fax"
+            [address]="agencyInfo?.field_agency_office_address" [id]="'id_'+i"
+            data-aos="fade-up" [attr.data-aos-delay]="150*(i+1)"
+            ></app-agency-office-card>
+
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>

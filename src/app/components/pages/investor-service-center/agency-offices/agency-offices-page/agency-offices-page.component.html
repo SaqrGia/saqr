@@ -1,0 +1,37 @@
+<app-first-section
+[title]="agencyOfficePage?.title"
+[ImageUrl]="baseUrl+agencyOfficePage?.field_agency_offices_s1_image"
+></app-first-section>
+
+<section class="section-blog pt-95">
+  <div class="container pt-20">
+    <!-- Start Header Section -->
+    <div class="row justify-content-center text-center  pt-20">
+      <div class="col-md-10 col-lg-8">
+
+      </div>
+    </div>
+    <!-- / End Header Section -->
+    <div class="row">
+      <!-- Start Single blog -->
+    
+      <ng-container *ngFor="let agencyInfo of agencyOffice | paginate: { itemsPerPage: itemsPerPage, currentPage: p }  index as i;">
+        <div class="col-lg-6 col-xl-4 pt-2 pb-5">
+          <app-agency-office-card
+          [image]="baseUrl+agencyInfo?.field_agency_offices_section_1_i"
+          [description]="agencyInfo?.field_agency_office_details"
+          field_agency_office_details
+          [title]="agencyInfo?.field_agency_offices_section_1_t"
+          [email]="agencyInfo?.field_agency_offices_email"
+          [phone]="agencyInfo?.field_agency_offices_phone"
+          [fax]="agencyInfo?.field_agency_offices_fax"
+          [address]="agencyInfo?.field_agency_office_address"
+          [id]="'id_'+i"
+         
+          ></app-agency-office-card>
+        </div>
+   
+    </ng-container>
+    </div>
+  </div>
+</section>

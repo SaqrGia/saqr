@@ -1,0 +1,49 @@
+<section class="light pt-5">
+	<div class="container py-2">
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{{image}}" alt="Gia About" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#" [innerHTML]="title"></a></h1>
+				<div class="postcard__bar"></div>
+        <div class="postcard__preview-txt"><p  [innerHTML]="shortDetails"></p></div>
+
+        <button class="btn" type="button"  (click)="open(content)" [innerHTML]="'[ + '+('Show More' | translate)+' ]'"></button>
+        
+			</div>
+  
+		</article>
+		
+
+	</div>
+</section>
+  
+<ng-template #content let-modal>
+	
+	<div class="modal-header">
+		<h6 class="modal-title"id="modal-basic-title"  [innerHTML]="title" >
+		
+		</h6>
+		<button type="button" class="close btn btn-icon btn-danger"
+				aria-label="Close" (click)="modal.dismiss('Cross click')">
+  
+			<span aria-hidden="true">
+				×
+			</span>
+		</button>
+	</div>
+	<div class="modal-body custom-body">
+		<div class="row">
+		<div class="popup-body" [innerHTML]="fullDetails"></div>
+	   </div>
+	</div>
+	
+	<div class="modal-footer">
+		<button type="button"
+			class="btn btn-outline-primary"
+			(click)="modal.close()">
+			close
+		</button>
+	</div>
+  </ng-template>

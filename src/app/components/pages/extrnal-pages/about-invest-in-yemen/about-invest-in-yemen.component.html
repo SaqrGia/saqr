@@ -1,0 +1,37 @@
+<!-- Page Breadcumb -->
+<app-first-section
+[title]="aboutInvestInYemen?.field_about_invest_in_y_s1_title"
+[ImageUrl]="baseUrl+aboutInvestInYemen?.field_about_invest_in_y_s1_image"
+></app-first-section>
+<!-- Page Breadcumb End -->
+
+
+<!-- Overview starts -->
+<section class="about-us pt-5 pb-5 " >
+  <div class="container">
+      <div class="about-image-box">
+          <div class="row d-flex align-items-center justify-content-between">
+              <div class="col-lg-6 mb-4 pe-4">
+
+                  <img src="{{baseUrl}}{{aboutInvestInYemen?.field_about_invest_in_y_s2_image}}" alt="" style="
+                border-radius: 10px;
+                box-shadow: 2px 4px 20px 0px #808080b5;
+            ">
+
+              </div>
+              <div class="col-lg-6 mb-4 ps-4">
+                  <div class="about-content mb-4">
+
+                      <h4 class="border-b mb-2 pb-1" [innerHTML]="aboutInvestInYemen?.field_about_invest_in_y_s2_title"></h4>
+                      <p class="border-b mb-2 pb-2 scroll" style="font-weight: 500;" [innerHTML]=" aboutInvestInYemen?.field_about_invest_in_y_s2_descr"></p>
+                     
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </div>
+  <div class="white-overlay"></div>
+</section>
+<!-- Overview ends -->
+<!-- Overview ends -->

@@ -1,0 +1,36 @@
+@media(min-width:991px) {
+  .footer-section {
+      position: sticky !important;
+  }
+}
+
+.footer__logo__image {
+  width: 200px !important;
+}
+
+.footer--bg {
+  background: var(--primary-color);
+}
+
+.footer__newsletter__input {
+  border-radius: 22px 0px;
+  border: 1px solid #0069b3 !important;
+  height: 38px;
+  background: white;
+}
+
+.footer__newsletter__button {
+  border-radius: 21px 0px 21px 0px;
+}
+
+input.ar.footer__newsletter__button {
+  /* left: 0; */
+}
+
+input.en.footer__newsletter__button {
+  right: 0;
+}
+
+.footer__line {
+  background-color: #ffffff29;
+  color: #EAF5FB00;}

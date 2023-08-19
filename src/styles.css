@@ -1,0 +1,102 @@
+/* @import url('./assets/animation/animate.min.css'); */
+/* @import url('./assets/animation/custom-animation.css'); */
+@import url('./assets/swiper/swiper.min.css');
+@import url('./assets/nice-select/nice-select.css');
+@import url('./assets/css/main.css');
+
+@import url('./assets/css/owl.css');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap'); */
+
+@import url('./assets/css/font-awesome-pro.css');
+@import url('./assets/css/elegant-icon.css');
+
+@font-face {
+  font-family: "Brando Arabic";
+  src: url("./assets/fonts/alfont_com_Brando-Arabic-Text.otf");
+  font-weight: 400;
+  font-display: swap
+}
+@font-face {
+  font-family: 'Tajawal';
+  src: url('/assets/fonts/Tajawal-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+:root {
+  /* to be check if needed otherwise delete it */
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+
+  /* must be approved by the designer? */
+  /* --primary-color: #0057b3; */
+  --primary-color: #0069b4;
+  --primary-dark-color: #0052a8;
+  /* --secondary-color: #f5931d; */
+  --secondary-color: #f7a600;
+  --secondary-dark-color: #e89a00;
+  --Tertiary-color: #EAF5FB;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --background-color: #fff;
+  --card-color: #ccc;
+  --card-background-color: #2e64b7;
+  --card-background-color: #333; 
+  --buttons-color: var(--background-color);
+  --buttons-background-color: var(--primary-color);
+  --icon-world-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.898' height='23.898' viewBox='0 0 23.898 23.898'%3E%3Cg id='noun_Language_1825533' transform='translate(-5.5 -5.5)'%3E%3Cg id='Layer_2' data-name='Layer 2' transform='translate(5.5 5.5)'%3E%3Cpath id='Pfad_523' data-name='Pfad 523' d='M27.641,23.688A11.893,11.893,0,0,0,29.4,17.449h0a11.894,11.894,0,0,0-1.757-6.238l-.007-.01a11.95,11.95,0,0,0-20.371,0l-.007.01a11.953,11.953,0,0,0,0,12.477l.007.011a11.95,11.95,0,0,0,20.371,0Zm-8.665,3.663a2.9,2.9,0,0,1-.776.536,1.751,1.751,0,0,1-1.5,0,3.658,3.658,0,0,1-1.356-1.193A10.68,10.68,0,0,1,13.8,23.345q1.823-.112,3.65-.114t3.651.114a13.479,13.479,0,0,1-.655,1.8,6.929,6.929,0,0,1-1.469,2.2ZM6.866,18.121h4.82a23.712,23.712,0,0,0,.436,4q-1.976.174-3.942.478a10.534,10.534,0,0,1-1.313-4.482ZM8.179,12.3q1.965.3,3.944.478a23.67,23.67,0,0,0-.437,4H6.866A10.534,10.534,0,0,1,8.179,12.3Zm7.743-4.747a2.9,2.9,0,0,1,.776-.536,1.751,1.751,0,0,1,1.5,0A3.658,3.658,0,0,1,19.556,8.2,10.68,10.68,0,0,1,21.1,11.554q-1.823.112-3.65.114T13.8,11.554a13.477,13.477,0,0,1,.655-1.8,6.929,6.929,0,0,1,1.469-2.2Zm12.111,9.23h-4.82a23.714,23.714,0,0,0-.436-4q1.976-.174,3.942-.478A10.534,10.534,0,0,1,28.032,16.778ZM13.472,22.021a22.205,22.205,0,0,1-.443-3.9H21.87a22.2,22.2,0,0,1-.442,3.9q-1.987-.13-3.978-.133T13.472,22.021Zm7.955-9.143a22.207,22.207,0,0,1,.443,3.9H13.028a22.2,22.2,0,0,1,.442-3.9q1.987.13,3.978.133t3.977-.133Zm1.786,5.243h4.82A10.534,10.534,0,0,1,26.719,22.6q-1.965-.3-3.944-.478A23.669,23.669,0,0,0,23.212,18.121Zm2.7-7.061q-1.718.248-3.447.393a15.31,15.31,0,0,0-.8-2.254,9.527,9.527,0,0,0-1.112-1.892A10.6,10.6,0,0,1,25.914,11.06ZM9.949,9.949a10.6,10.6,0,0,1,4.392-2.643c-.025.033-.051.064-.076.1a12.256,12.256,0,0,0-1.832,4.049q-1.729-.146-3.45-.393A10.694,10.694,0,0,1,9.949,9.949Zm-.965,13.89q1.718-.248,3.447-.393a15.311,15.311,0,0,0,.8,2.254,9.528,9.528,0,0,0,1.112,1.892,10.6,10.6,0,0,1-5.358-3.754Zm15.965,1.111a10.6,10.6,0,0,1-4.392,2.643c.025-.033.051-.064.076-.1a12.256,12.256,0,0,0,1.832-4.049q1.729.146,3.45.393a10.694,10.694,0,0,1-.965,1.111Z' transform='translate(-5.5 -5.5)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+
+}
+
+body{
+  /* warning: no horizontal scrolling  */
+  overflow-x: hidden;
+}
+section{
+  overflow: hidden;
+}
+.primary-color{
+  color:var(--primary-color);
+}
+
+.title2{
+  position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 38px;
+}
+ .title2:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #0071ba;
+    border-radius: 3px;
+}
+
+ .title2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+    transform: translateX(30px);
+  width: 10px;
+  height: 3px;
+  background-color: #f5931d;
+    border-radius: 3px;
+}
+
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  background: var(--background-color);
+  gap: 15px;
+  margin-bottom: 10px;
+}

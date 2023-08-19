@@ -1,0 +1,23 @@
+<section id="ts-hero" class="mb-0 flex-wrap">
+
+    <!-- MAP
+    =============================================================================================================-->
+    <div class="ts-map w-100 ts-min-h__60vh ts-z-index__1">
+
+        <div id="ts-map-hero" class="h-100"
+        leaflet
+        [leafletOptions]="options"
+        (leafletMapReady)="onMapReady($event)"
+        [leafletLayersControl]="layersControl"
+        [leafletLayers]="layers"
+        >
+        
+        </div>
+   
+        
+
+    </div>
+    
+
+
+</section>

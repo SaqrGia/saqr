@@ -1,0 +1,102 @@
+<!-- Page Breadcumb -->
+
+<app-first-section
+[title]="economicZoneDetails?.field_name_of_economic_zone"
+[ImageUrl]="baseUrl+economicZoneDetails?.field_economic_zones_image_in_se"
+></app-first-section>
+<!-- Page Breadcumb End -->
+<!-- About && Features && Donner Section -->
+
+
+<app-right-image
+[image]="baseUrl+economicZoneDetails?.field_economic_zones_details_ima"
+[title]="economicZoneDetails?.field_name_of_economic_zone"
+[shortDetails]="economicZoneDetails?.field_economic_zones_details.slice(0, 330) + '...' "
+[fullDetails]="economicZoneDetails?.field_economic_zones_details"
+></app-right-image>
+
+
+<!-- ======= Tabs Section ======= -->
+
+
+<app-tabs
+[hasHead]="false"
+[tabs]="[
+{title:economicZoneDetails?.field_title_1_data_details_,content:economicZoneDetails?.field_details_1_data_details_},
+{title:economicZoneDetails?.field_title_2_data_details_,content:economicZoneDetails?.field_details_2_data_details_},
+{title:economicZoneDetails?.field_title_3_data_details_,content:economicZoneDetails?.field_details_3_data_details_},
+{title:economicZoneDetails?.field_title_4_data_details_,content:economicZoneDetails?.field_details_4_data_details_},
+]"
+
+></app-tabs>
+<!-- End Tabs Section -->
+
+<section class="review pt-30 pb-30 position-relative overflow-hidden">
+  <div class="container">
+      <div class="row justify-content-center text-center">
+          <div class="col-lg-10 justify-content-center">
+              <!-- Section Heading/Title -->
+              <div class="sectionTitle mb-30">
+                  <h4 class="title-header"[innerHTML]="economicZoneDetails?.field_economic_zones_s4_title" ></h4>
+              </div>
+              <!-- Section Heading/Title End -->
+              <div class="reviewMap mb-50">
+                  <img src="{{baseUrl}}{{economicZoneDetails?.field_economic_zones_s4_image}}" alt="Gia Map">
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<!-- Overview starts -->
+
+
+
+
+<!-- opertinities starts -->
+<section class="trending-podcast-section ">
+  <div class="container">
+      <div class="section-title mb-6 w-75 mx-auto text-center">
+          <!-- <h4 class="mb-1 theme1">Opportunities</h4> -->
+          <h2 class="mb-1 title-header">{{'Investment_Opportunities' | translate}}<span class="theme"></span></h2>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+        </p> -->
+      </div>
+      <div class="row">
+
+
+          <div class="row">
+
+              <ng-container *ngFor="let opportunity  of opportunities let i2 = index " >
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 col-xs-12 mb-6 mb-lg-0 card-center ">
+
+                 
+                    <app-opportunities [opportunityName]="opportunity?.field_opportunity_name"
+                    [OpportunityCost]="opportunity?.field_opportunity_cost_as_string"
+                    [OpportunityCity]="opportunity?.field_governorate" [OpportunitySector]="opportunity?.field_sector"
+                    [field_opportunities_details]="opportunity?.field_opportunities_details"
+                    [OpportunityCount]="opportunity?.field_number_of_opportunities"
+                    [haveDownload]="opportunity?.field_detail_file"
+                    [downloadUrl]="baseUrl + opportunity?.field_detail_file"
+                    [JobsOpportunities]="opportunity?.field_opportunities_employment"
+                    class="d-flex justify-content-center"
+                    >
+  
+                  </app-opportunities>
+              </div>
+
+            </ng-container>
+
+
+
+
+          </div>
+        <p *ngIf="opportunities?.length === 0">No results found.</p>
+
+      </div>
+
+
+  </div>
+</section>

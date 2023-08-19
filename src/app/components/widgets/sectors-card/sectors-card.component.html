@@ -1,0 +1,27 @@
+<div class="sector-card" style="background-image:url('{{image}}');">
+    <div class="title-section">
+        <h4 class="title" [innerHTML]="title"></h4>
+        <p [innerHTML]="details"></p>
+    </div>
+    <div class="row info-section">
+        <div class="col-lg-8 d-flex">
+            <div class="tile">
+                <h6>{{OpportunitiesTotal}}</h6>
+                <span>{{'Opportunities' | translate}}</span>
+            </div>
+            <div class="tile">
+                <h6>{{OpportunityWorkforce}}</h6>
+                <span>{{'Jobs Opportunities' | translate}}</span>
+            </div>
+            <div class="tile">
+                <h6> {{getCost()}}<span>{{getCurency()|translate}}</span></h6>
+                <span>{{'cost' | translate}}</span>
+            </div>
+        </div>
+        <div class="col-lg-4 tile">
+        <div class="" style="margin-inline-start: auto;">
+            <a [routerLink]="link">{{'view-sector' | translate}}</a>
+        </div>
+    </div>
+    </div>
+</div>

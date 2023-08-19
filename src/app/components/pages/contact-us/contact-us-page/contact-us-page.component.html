@@ -1,0 +1,166 @@
+ <!-- Page Breadcumb -->
+ <app-first-section
+ [title]="contactUsPage?.field_contact_us_page_title"
+ [ImageUrl]="baseUrl+contactUsPage?.field_contact_us_page_image"
+ ></app-first-section>
+<!-- Page Breadcumb End -->
+
+
+
+
+  <section class="contact-address-area animated bounceInRight">
+        <div class="container">
+            <div class="sec-title-style1 text-center max-width">
+                <div class="title">{{'Contact_us' | translate}}</div>
+                <div class="text">
+                    <div class="decor-left"><span></span></div>
+                    <p> {{'website_name' | translate}} </p>
+                    <div class="decor-right"><span></span></div>
+                </div>
+                <div class="bottom-text">
+                    <p>{{'contact_us_describe' | translate}}:</p>
+                </div>
+            </div>
+            <div class="contact-address-box row">
+                <div class="col-sm-4 single-contact-address-box text-center">
+                    <div class="icon-holder">
+                        <span class="icon-clock-1">
+                            <img src="http://karamqutran.000webhostapp.com/assets/image/logos/Logo%20gia.png" />
+                        </span>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 single-contact-address-box main-branch">
+                    <h3>{{'main_center' | translate}} </h3>
+                    <div class="inner">
+                        <ul>
+                            <li>
+                                <div class="title">
+                                    <h4>{{'address' | translate}}:</h4>
+                                </div>
+                                <div class="text text-details">
+                                  
+                                    <p  [innerHTML]="contactUsCard?.field_contact_us_card_address"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <h4>{{'phone' | translate}}</h4>
+                                </div>
+                                <div class="text text-details">
+                                  <p style="color:  #313131;padding-inline: 20px;" type="button" class="connect ustify-content-center" [innerHTML]="contactUsCard?.field_cont"> </p>
+                                  
+                                </div>
+                            </li>
+                            <li>
+                              <div class="title">
+                                  <h4>{{'email' | translate}}:</h4>
+                              </div>
+                              <div class="text text-details">
+                                <p  style="color:  #313131;padding-inline: 20px;" [innerHTML]="contactUsCard?.field_contact_us_card_email"> </p>
+                               
+                              </div>
+                          </li>
+                            <li>
+                                <div class="title">
+                                    <h4>{{'work_hours' | translate}}:</h4>
+                                </div>
+                                <div class="text text-details">
+                                  <p><br> </p>
+                                    <p>السبت-الاربعاء: 9:30 صباحا - 6:30 مساء</p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <!--End Single Contact Address Box-->
+
+            </div>
+        </div>
+    </section>
+    <!--End Contact Address Area-->
+
+    <!--Start contact form area-->
+    <section class="contact-info-area animated bounceInLeft ">
+        <div class="container ">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="contact-form">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="sec-title-style1 float-left">
+                                    <div class="title"> {{'inquiry' | translate}}:</div>
+                                    <div class="text">
+                                        <div class="decor-left"><span></span></div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="text-box float-right">
+                                    <p>{{'form' | translate}}: </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner-box">
+                            <form id="contact-form" [formGroup]="contactUsForm" name="contact_form" class="default-form" action="inc/sendmail.php"
+                                method="post">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-12">
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="input-box">
+                                                    <input
+                                                    formControlName="your_name"
+                                                     type="text" name="form_name" value="" placeholder="{{'name' | translate}}:"
+                                                        required="">
+                                                </div>
+                                                <small *ngIf="contactUsForm.controls['your_name'].dirty && contactUsForm.hasError('required','your_name')" class="text-danger">*your name is required</small>
+                                              
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="input-box">
+                                                    <input
+                                                    formControlName="your_email"
+                                                    type="email" name="form_email" value="" placeholder="{{'email' | translate}}:"
+                                                        required="">
+                                                </div>
+                                                <small *ngIf="contactUsForm.controls['your_email'].dirty && contactUsForm.hasError('required','your_email')" class="text-danger">*your email is required</small>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="input-box">
+                                                    <input 
+                                                    formControlName="subject"
+                                                    type="text" name="form_subject" value=""
+                                                        placeholder="{{'subject' | translate}}:">
+                                                </div>
+                                                <small *ngIf="contactUsForm.controls['subject'].dirty && contactUsForm.hasError('required','subject')" class="text-danger">*the subject is required</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-12">
+                                        <div class="input-box">
+                                            <textarea formControlName="message" name="form_message" placeholder="{{'message' | translate}}:"
+                                                required=""></textarea>
+                                                <small *ngIf="contactUsForm.controls['message'].dirty && contactUsForm.hasError('required','message')" class="text-danger">*the message is required</small>
+                                        </div>
+                                        <div class="button-box">
+                                            <input
+                                            
+                                            id="form_botcheck" name="form_botcheck" class="form-control"
+                                                type="hidden" value="">
+                                              
+                                            <button type="submit" (click)="onSendForm()"  data-loading-text="Please wait...">{{'send' | translate}}<span
+                                                    class="flaticon-next"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>

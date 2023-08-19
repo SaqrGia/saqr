@@ -1,0 +1,224 @@
+<!-- Page Breadcumb -->
+
+<app-first-section
+[title]="investmentGuide?.field_investment_guide_s1_title"
+[ImageUrl]="baseUrl+investmentGuide?.field_investment_guide_s1_i"
+></app-first-section>
+<!-- Page Breadcumb End -->
+
+
+<!-- our teams starts -->
+
+<app-time-line
+[header]="investmentGuide?.field_investment_guide_s2_title1"
+[decryption]="investmentGuide?.field_investment_guide_s2_title2"
+[data]="investmentGuideCard"
+
+
+>
+
+</app-time-line>
+
+
+
+
+<app-invest-guide-box
+[header]="investmentGuide?.field_investment_guide_s3_title1"
+[title1]="investmentGuide?.field_home_s2_box_1_title_"
+[title2]="investmentGuide?.field_investment_guide_s3_box2_t"
+[title3]="investmentGuide?.field_investment_guide_s3_box1_t"
+[title4]="investmentGuide?.field_investment_guide_s3_box4_t"
+[details1]="investmentGuide?.field_investment_guide_s3_box1_d.slice(0, 120) + (investmentGuide?.field_investment_guide_s3_box1_d.length > 120 ? '...' : '')"
+[details2]="investmentGuide?.field_investment_guide_s3_box2_d.slice(0, 120) + (investmentGuide?.field_investment_guide_s3_box2_d.length > 120 ? '...' : '')"
+[details3]="investmentGuide?.field_investment_guide_s3_box3_d.slice(0, 120) + (investmentGuide?.field_investment_guide_s3_box3_d.length > 120 ? '...' : '')"
+[details4]="investmentGuide?.field_investment_guide_s3_box4_d.slice(0, 120) + (investmentGuide?.field_investment_guide_s3_box4_d.length > 120 ? '...' : '')"
+>
+
+</app-invest-guide-box>
+<!-- <section class="donation  pb-100">
+
+  <div class="container">
+    <div class="sec-title mb-35 text-center">
+      <div class="sub-title">
+          <h3>Follow Simple Steps</h3>
+      </div>
+
+  </div>
+    <div class="row">
+
+      <div class="col-lg-4 mb-30">
+        <div class="innerWrapperSidebar mb-30">
+          <div class="sidebarWidget">
+            <div class="sidebarTitle">
+              <h5 class="sidebarTitle__heading text-uppercase mb-30">categories</h5>
+            </div>
+            <div class="sidebarCategories">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span>Charity</span>
+                    <span>03</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Donation</span>
+                    <span>03</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Medical & Aid Kit</span>
+                    <span>03</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Volenteer Team</span>
+                    <span>03</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Food and Water</span>
+                    <span>03</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Help Hoomeless People</span>
+                    <span>03</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="innerWrapperSidebar">
+          <div class="sidebarWidget">
+            <div class="sidebarTitle">
+              <h5 class="sidebarTitle__heading text-uppercase mb-30">Direct Contact us</h5>
+            </div>
+            <div class="sidebarContacts">
+              <input type="text" class="sidebarContacts__input" placeholder="Enter name*">
+              <input type="email" class="sidebarContacts__input" placeholder="Enter your mail*">
+              <textarea class="sidebarContacts__input textarea" name="message" id="message" placeholder="Massage*"></textarea>
+              <a class="btn btn--styleOne btn--secondary it-btn" href="donation-listing.html">
+                <span class="btn__text">send massage</span>
+                <span class="it-btn__inner">
+                <span class="it-btn__blobs">
+                  <span class="it-btn__blob"></span>
+                <span class="it-btn__blob"></span>
+                <span class="it-btn__blob"></span>
+                <span class="it-btn__blob"></span>
+                </span>
+                </span>
+                <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter>
+                      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10">
+                      </feGaussianBlur>
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+                      </feColorMatrix>
+                      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                    </filter>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 mb-30">
+        <div class="ccFaqBlock">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  How do I create an account ?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  How do i Creat a Casus page ?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  what kind of causus we should add our site ?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  Is it difficult to fly a drone ?
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                  What kind of regulations are there to fly a drone ?
+                </button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                  what payment mathod do you accept ?
+                </button>
+              </h2>
+              <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse7">
+                  Not working properly in donation page ?
+                </button>
+              </h2>
+              <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

@@ -1,0 +1,195 @@
+<section class="section section-industries bg-map mob-pb animatedParent animateOnce" data-sequence="500"
+    data-appear-top-offset="-300">
+
+    <div class="industry-holder animated fadeInLeftShort" data-id="1">
+        <div class="industry-holderInner pe-1" [dir]="'rtl'">
+            <div class="industry-wheel animated fadeInUpShort" data-id="2">
+                <div class="wheel-dots">
+                    <span class="wheel-dot span-1 selected" data-href="span-1"><em>{{sectors && sectors.length > 0 ?
+                            sectors[0].field_sector_name:"loading"}}</em><i></i></span>
+                    <span class="wheel-dot span-2 " data-href="span-2"><em>{{sectors && sectors.length > 0 ?
+                            sectors[8].field_sector_name:"loading"}}</em><i></i></span>
+                    <span class="wheel-dot span-3 " data-href="span-3"><em>{{sectors && sectors.length > 0 ?
+                            sectors[2].field_sector_name:"loading"}}</em><i></i></span>
+                    <span class="wheel-dot span-4 " data-href="span-4"><em>{{sectors && sectors.length > 0 ?
+                            sectors[3].field_sector_name:"loading"}}</em><i></i></span>
+                    <span class="wheel-dot span-5 " data-href="span-5"><em>{{sectors && sectors.length > 0 ?
+                            sectors[7].field_sector_name:"loading"}}</em><i></i></span>
+                    <span class="wheel-dot span-6 " data-href="span-6"><em>{{sectors && sectors.length > 0 ?
+                            sectors[5].field_sector_name:"loading"}}</em><i></i></span>
+                    <span class="wheel-dot span-7 " data-href="span-7"><em>{{sectors && sectors.length > 0 ?
+                            sectors[4].field_sector_name:"loading"}}</em><i></i></span>
+                    <span class="wheel-dot span-8 " data-href="span-8"><em>{{sectors && sectors.length > 0 ?
+                            sectors[6].field_sector_name:"loading"}}</em><i></i></span>
+                    <span class="wheel-dot span-9 " data-href="span-9"><em>{{sectors && sectors.length > 0 ?
+                            sectors[1].field_sector_name:"loading"}}</em><i></i></span>
+                    <div class="wheel-outer">
+                        <div class="wheel-circle">
+                            <span class="wheel-span span-1 selected"></span>
+                            <span class="wheel-span span-2 "></span>
+                            <span class="wheel-span span-3 "></span>
+                            <span class="wheel-span span-4 "></span>
+                            <span class="wheel-span span-5 "></span>
+                            <span class="wheel-span span-6 "></span>
+                            <span class="wheel-span span-7 "></span>
+                            <span class="wheel-span span-8 "></span>
+                            <span class="wheel-span span-9 "></span>
+                            <div class="wheel">
+                                <div class="wheel-block wheel-block-1 selected" data-id="span-1"  >
+                                   
+                                     <i class=" {{(sectors && sectors.length > 0) ?
+                                        sectors[0].field_icon:''}}"></i>
+                                </div>
+                                <div class="wheel-block wheel-block-2 " data-id="span-2">
+                                    <i class=" {{(sectors && sectors.length > 0) ?
+                                        sectors[8].field_icon:''}}"></i>
+                                    </div>
+                                <div class="wheel-block wheel-block-3 " data-id="span-3">
+                                    <i class=" {{(sectors && sectors.length > 0) ?
+                                        sectors[2].field_icon:''}}"></i></div>
+                                <div class="wheel-block wheel-block-4 " data-id="span-4">
+                                    <i class=" {{(sectors && sectors.length > 0) ?
+                                        sectors[3].field_icon:''}}"></i> </div>
+                                <div class="wheel-block wheel-block-5 " data-id="span-5">
+                                    <i class=" {{(sectors && sectors.length > 0) ?
+                                        sectors[7].field_icon:''}}"></i> </div>
+                                <div class="wheel-block wheel-block-6 " data-id="span-6">
+                                    <i class=" {{(sectors && sectors.length > 0) ?
+                                        sectors[5].field_icon:''}}"></i>   </div>
+                                <div class="wheel-block wheel-block-7 " data-id="span-7">
+                                    <i class=" {{(sectors && sectors.length > 0) ?
+                                        sectors[4].field_icon:''}}"></i>  </div>
+                                <div class="wheel-block wheel-block-8 " data-id="span-8">
+                                    <i class=" {{(sectors && sectors.length > 0) ?
+                                        sectors[6].field_icon:''}}"></i>  </div>
+                                <div class="wheel-block wheel-block-9 " data-id="span-9">
+                                    <i class=" {{(sectors && sectors.length > 0) ?
+                                        sectors[1].field_icon:''}}"></i> 
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="metrics">
+            <div class="metrics-box activated" id="span-1">
+                <button class="btn close"></button>
+                <h3>{{sectors && sectors.length > 0 ? sectors[0].field_sector_name:"loading"}}</h3>
+                <p>{{sectors && sectors.length > 0 ? sectors[0].field_sectors_summary_:"loading"}}</p>
+                <div class="metrics-content">
+                    
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn btn-primary" href="/sectors-details/0">
+                        <span>{{ 'sector_button' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="metrics-box " id="span-2">
+                <button class="btn close"></button>
+                <h3>{{sectors && sectors.length > 0 ? sectors[8].field_sector_name:"loading"}}</h3>
+                <p>{{sectors && sectors.length > 0 ? sectors[8].field_sectors_summary_:"loading"}}</p>
+                <div class="metrics-content">
+                    
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn btn-primary" href="/sectors-details/8">
+                        <span>{{ 'sector_button' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="metrics-box " id="span-3">
+                <button class="btn close"></button>
+                <h3>{{sectors && sectors.length > 0 ? sectors[2].field_sector_name:"loading"}}</h3>
+                <p>{{sectors && sectors.length > 0 ? sectors[2].field_sectors_summary_:"loading"}}</p>
+                <div class="metrics-content">
+                   
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn btn-primary" href="/sectors-details/2">
+                        <span>{{ 'sector_button' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="metrics-box " id="span-4">
+                <button class="btn close"></button>
+                <h3>{{sectors && sectors.length > 0 ? sectors[3].field_sector_name:"loading"}}</h3>
+                <p>{{sectors && sectors.length > 0 ? sectors[3].field_sectors_summary_:"loading"}}</p>
+                <div class="metrics-content">
+                   
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn btn-primary" href="/sectors-details/3">
+                        <span>{{ 'sector_button' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="metrics-box " id="span-5">
+                <button class="btn close"></button>
+                <h3>{{sectors && sectors.length > 0 ? sectors[7].field_sector_name:"loading"}}</h3>
+                <p>{{sectors && sectors.length > 0 ? sectors[7].field_sectors_summary_:"loading"}}</p>
+                <div class="metrics-content">
+                   
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn btn-primary" href="/sectors-details/7">
+                        <span>{{ 'sector_button' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="metrics-box " id="span-6">
+                <button class="btn close"></button>
+                <h3>{{sectors && sectors.length > 0 ? sectors[5].field_sector_name:"loading"}}</h3>
+                <p>{{sectors && sectors.length > 0 ? sectors[5].field_sectors_summary_:"loading"}}</p>
+               <div class="metrics-content">
+                    
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn btn-primary" href="/sectors-details/5">
+                        <span>{{ 'sector_button' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="metrics-box " id="span-7">
+                <button class="btn close"></button>
+                <h3>{{sectors && sectors.length > 0 ? sectors[4].field_sector_name:"loading"}}</h3>
+                <p>{{sectors && sectors.length > 0 ? sectors[4].field_sectors_summary_:"loading"}}</p>
+                <div class="metrics-content">
+                   
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn btn-primary" href="/sectors-details/4">
+                        <span>{{ 'sector_button' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="metrics-box " id="span-8">
+                <button class="btn close"></button>
+                <h3>{{sectors && sectors.length > 0 ? sectors[6].field_sector_name:"loading"}}</h3>
+                <p>{{sectors && sectors.length > 0 ? sectors[6].field_sectors_summary_:"loading"}}</p>
+                <div class="metrics-content">
+                   
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn btn-primary" href="/sectors-details/6">
+                        <span>{{ 'sector_button' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="metrics-box " id="span-9">
+                <button class="btn close"></button>
+                <h3>{{sectors && sectors.length > 0 ? sectors[1].field_sector_name:"loading"}}</h3>
+                <p>{{sectors && sectors.length > 0 ? sectors[1].field_sectors_summary_:"loading"}}</p>
+                 <div class="metrics-content">
+                   
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn btn-primary" href="/sectors-details/1">
+                        <span>{{ 'sector_button' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

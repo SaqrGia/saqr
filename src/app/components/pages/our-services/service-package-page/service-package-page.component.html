@@ -1,0 +1,56 @@
+
+
+<app-first-section
+[title]="servicePackage?.field_home_s1_header"
+[ImageUrl]="baseUrl+servicePackage?.field_home_s3_back_image"
+></app-first-section>
+<!-- Page Breadcumb End -->
+
+<section class="feature-area pt-50 pb-70">
+  <div class="container">
+      <div class="section-title mb-6 w-75 mx-auto text-center">
+          <h6 class="title2" [innerHTML]="servicePackage?.field_service_package_section_1_"><span class="theme"></span></h6>
+          <p [innerHTML]="servicePackage?.field_service_pack_section_2_des">
+          </p>
+      </div>
+
+        <ng-container *ngFor="let BackageServices  of serviceBackageServices let i = index " >
+            <div class="row ">
+
+          <div class="col-lg-6 p-5 pt-3 " [class.xorder-2]=" (i % 2 === 0)" >
+              <div class="feature-img">
+                  <img src="{{baseUrl}}{{BackageServices?.field_service_package_image}}" alt="Feature">
+              </div>
+          </div>
+          <div class="col-lg-6 " [class.xorder-1]=" (i % 2 === 1)">
+              <div class="feature-content">
+                  <div class="feature-top">
+                      <h2>{{BackageServices?.field_service_package_name}}</h2>
+                      <p  [innerHTML]="BackageServices?.field_service_package_details"></p>
+
+                  </div>
+              </div>
+          </div>
+        
+        </div>
+
+        </ng-container>
+
+<!-- 
+        <div class="col-lg-6 " *ngIf="i % 2 !== 0">
+            <div class="feature-content">
+                <div class="feature-top">
+                    <h2>{{BackageServices?.field_service_package_name}}</h2>
+                    <p [innerHTML]="BackageServices?.field_service_package_details"></p>
+                </div>
+
+
+            </div>
+        </div> 
+        <div class="col-lg-6 p-5 pt-0" *ngIf="i % 2 !== 0">
+            <div class="feature-img">
+                <img src="{{baseUrl}}{{BackageServices?.field_service_package_image}}" alt="Feature">
+            </div>
+        </div>-->
+      </div>
+</section>

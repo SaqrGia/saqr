@@ -1,0 +1,42 @@
+<app-first-section
+[title]="sectorsPage?.field_sectors_page_title"
+[ImageUrl]="baseUrl+sectorsPage?.field_sectors_page_image"
+></app-first-section>
+
+
+
+<!-- opportunities starts -->
+<section class="trending-podcast-section section-padding">
+  <div class="container">
+    <div class="row justify-content-center text-center m-0 pt-3">
+      <div class="col-md-10 col-lg-10">
+        <div class="header-section ">
+          <h2 class="title2" [innerHTML]="'SECTORS IN YEMEN' | translate" ></h2>
+          <h2 class="mb-1"> <span class="theme"></span></h2>
+           <p class="" style="font-size: 1.5rem;" [innerHTML]="sectorsPage?.field_description"></p>
+        </div>
+      </div>
+    </div>
+          <div class="row">
+            <ng-container *ngFor="let sector of filteredOpportunities  let i = index">
+              <div class="col-lg-6  col-md-12 col-sm-12 col-xs-12 col-12 mb-4 pt-2 mb-lg-0">
+                    <app-sectors-card
+                    [image]="baseUrl+sector?.field_sectors_image"
+                    [title]="sector?.field_sector_name"
+                    [details]="sector?.field_sectors_summary_.slice(0, 150) + (sector?.field_sectors_summary_.length> 120 ? '...' : '') "
+                    [OpportunitiesTotal]="getSectorTotalOpportunitiesSum(i)"
+                    [OpportunityWorkforce]="getSectorJobsSum(i)"
+                    [OpportunityCost]=" getOpportunityCostSum(i) "
+                    [link]="['/sectors-details/',i]"
+                    >
+
+                    </app-sectors-card>
+              </div>
+
+            </ng-container>
+          </div>
+
+
+  </div>
+</section>
+<!-- opportunities ends -->

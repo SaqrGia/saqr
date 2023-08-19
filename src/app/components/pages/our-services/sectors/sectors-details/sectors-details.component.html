@@ -1,0 +1,201 @@
+
+<app-first-section
+[title]="sectorDetails?.field_sector_name"
+[ImageUrl]="baseUrl+sectorDetails?.field_s1_back_sector_image_"
+></app-first-section>
+
+
+<section class="about gray-bg pb-50 pt-50 ">
+
+  <div class="container">
+      <div class="row   justify-content-between">
+
+          <div class="col-lg-10 mb-30">
+              <div class="aboutContent aboutContent--style2  read-more">
+
+                  <div class="sectionTitle  mb-20">
+
+                      <!-- <h5 class="sectionTitle__big">{{'details' | translate}}</h5> -->
+                  </div>
+                  <p class="fst-italic">
+                    <ng-container *ngIf="!showFullText">
+                      <span [innerHTML]="(sectorDetails?.field_sectors_details_format.length > 500 ? (sectorDetails?.field_sectors_details_format.slice(0, 500) + '...') : sectorDetails?.field_sectors_details_format)"></span>
+                    </ng-container>
+                    <ng-container *ngIf="showFullText">
+                      <span [innerHTML]="sectorDetails?.field_sectors_details_format"></span>
+                    </ng-container>
+                  </p>
+                  <a type="button" *ngIf="sectorDetails?.field_sectors_details_format.length > 500" (click)="showFullText = !showFullText">{{ showFullText ? ('Read_less' | translate) : ('Show_more' | translate) }}</a>
+
+<!-- 
+                  <p class="fst-italic" [innerHTML]="showFullText ? (sectorDetails?.field_sectors_details_format) : (sectorDetails?.field_sectors_details_format.length > 500 ? (sectorDetails?.field_sectors_details_format.slice(0, 500) + '...') : sectorDetails?.field_sectors_details_format)"></p>
+                  <span *ngIf="showFullText" [innerHTML]="sectorDetails?.field_sectors_details_format.slice(500)"></span>
+                  <a type="button" *ngIf="sectorDetails?.field_sectors_details_format.length > 500" (click)="showFullText = !showFullText">{{ showFullText ?('Read_less' | translate) : ('Show_more' | translate) }}</a> -->
+
+
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+
+
+<!-- ======= Tabs Section ======= -->
+
+<!-- <section id="tabs" class="tabs">
+  <div class="container" data-aos="fade-up">
+
+      <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-3">
+              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                  <i class="ri-gps-line"></i>
+                  <h4 class="d-none d-lg-block" [innerHTML]="sectorDetails.field_sectors_box_1_title" ></h4>
+              </a>
+          </li>
+          <li class="nav-item col-3">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                  <i class="ri-body-scan-line"></i>
+                  <h4 class="d-none d-lg-block" [innerHTML]="sectorDetails.field_sectors_box_2_title" ></h4>
+              </a>
+          </li>
+          <li class="nav-item col-3">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <i class="ri-sun-line"></i>
+                  <h4 class="d-none d-lg-block" [innerHTML]="sectorDetails.field_sectors_box_3_title" ></h4>
+              </a>
+          </li>
+          <li class="nav-item col-3">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                  <i class="ri-store-line"></i>
+                  <h4 class="d-none d-lg-block"[innerHTML]="sectorDetails.field_sectors_box_4_title" ></h4>
+              </a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+              <div class="row">
+                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+
+
+                   <p class="fst-italic" [innerHTML]="showFullText2 ? (sectorDetails?.field_sectors_box_1_details) : (sectorDetails?.field_sectors_box_1_details.length > 700 ? (sectorDetails?.field_sectors_box_1_details.slice(0, 700) + '...') : sectorDetails?.field_sectors_box_1_details)"></p>
+                  <span *ngIf="showFullText2" [innerHTML]="sectorDetails?.field_sectors_box_1_details.slice(700)"></span>
+                  <a type="button" *ngIf="sectorDetails.field_sectors_box_1_details.length > 700" (click)="showFullText2 = !showFullText2">{{ showFullText2 ?('Read_less' | translate) : ('Show_more' | translate) }}</a>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+              <div class="row">
+                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+
+
+
+                      <p class="fst-italic" [innerHTML]="showFullText3 ? (sectorDetails?.field_sectors_box_2_details) : (sectorDetails?.field_sectors_box_2_details.length > 700 ? (sectorDetails?.field_sectors_box_2_details.slice(0, 700) + '...') : sectorDetails?.field_sectors_box_2_details)"></p>
+                      <span *ngIf="showFullText3" [innerHTML]="sectorDetails?.field_sectors_box_2_details.slice(700)"></span>
+                      <a type="button" *ngIf="sectorDetails.field_sectors_box_2_details.length > 700" (click)="showFullText3 = !showFullText3">{{ showFullText3 ?('Read_less' | translate) : ('Show_more' | translate) }}</a>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+              <div class="row">
+                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+
+
+                      <p class="fst-italic" [innerHTML]="showFullText4 ? (sectorDetails?.field_sectors_box_3_details) : (sectorDetails?.field_sectors_box_3_details.length > 700 ? (sectorDetails?.field_sectors_box_3_details.slice(0, 700) + '...') : sectorDetails?.field_sectors_box_3_details)"></p>
+                      <span *ngIf="showFullText4" [innerHTML]="sectorDetails?.field_sectors_box_3_details.slice(700)"></span>
+                      <a type="button" *ngIf="sectorDetails.field_sectors_box_3_details.length > 700" (click)="showFullText4 = !showFullText4">{{ showFullText4 ?('Read_less' | translate) : ('Show_more' | translate) }}</a>
+
+
+                  </div>
+
+              </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+              <div class="row">
+                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+
+
+
+                      <p class="fst-italic" [innerHTML]="showFullText5 ? (sectorDetails?.field_sectors_box_4_details) : (sectorDetails?.field_sectors_box_4_details.length > 700 ? (sectorDetails?.field_sectors_box_4_details.slice(0, 700) + '...') : sectorDetails?.field_sectors_box_4_details)"></p>
+                      <span *ngIf="showFullText5" [innerHTML]="sectorDetails?.field_sectors_box_4_details.slice(700)"></span>
+                      <a type="button" *ngIf="sectorDetails.field_sectors_box_4_details.length > 700" (click)="showFullText5 = !showFullText5">{{ showFullText5 ?('Read_less' | translate) : ('Show_more' | translate) }}</a>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+  </div>
+</section> -->
+
+<!-- End Tabs Section -->
+
+<app-tabs
+[hasHead]="false"
+[tabs]="[
+{title:sectorDetails?.field_sectors_box_1_title,content:sectorDetails?.field_sectors_box_1_details},
+{title:sectorDetails?.field_sectors_box_2_title,content:sectorDetails?.field_sectors_box_2_details},
+{title:sectorDetails?.field_sectors_box_3_title,content:sectorDetails?.field_sectors_box_3_details},
+{title:sectorDetails?.field_sectors_box_4_title,content:sectorDetails?.field_sectors_box_4_details},
+]"
+></app-tabs>
+
+
+<!-- opertinities starts -->
+<section class="trending-podcast-section section-padding">
+  <div class="container">
+      <div class="  mb-6 w-75 mx-auto text-center">
+          <!-- <h4 class="mb-1 theme1">Opportunities</h4> -->
+          <h2 class="mb-1 title-header">{{'Investment_Opportunities' | translate}}<span class=""></span></h2>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+        </p> -->
+      </div>
+      <div class="row">
+      
+
+        <ng-container *ngIf="filterData() && filterData().length > 0" >
+          <div class="row">
+
+              <ng-container *ngFor="let opportunity  of filterData()  let i2 = index " >
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 col-xs-12 mb-6 mb-lg-0 card-center ">
+
+         
+            <app-opportunities
+            [opportunityName]="opportunity?.field_opportunity_name"
+            [OpportunityCount]="opportunity?.field_number_of_opportunities"
+            [OpportunityCost]="opportunity?.field_opportunity_cost_as_string"
+            [OpportunityCity]="opportunity?.field_governorate"
+            [OpportunitySector]="opportunity?.field_sector"
+            [field_opportunities_details]="opportunity?.field_opportunities_details"
+            [haveDownload]="opportunity?.field_detail_file"
+            [downloadUrl]="baseUrl+opportunity?.field_detail_file"
+            [JobsOpportunities]="opportunity?.field_opportunities_employment"
+            ></app-opportunities>
+
+              </div>
+
+            </ng-container>
+
+          </div>
+        </ng-container>
+        <p *ngIf="filterData().length === 0">No results found.</p>
+
+      </div>
+
+
+  </div>
+</section>
+<!-- opertinities ends -->

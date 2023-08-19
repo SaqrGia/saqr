@@ -1,0 +1,138 @@
+.opportunity-card {
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 6px 6px 14px -7px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  height: 365px;
+  border-radius: 13% 0;
+  padding-top: 58px;
+  padding-inline: 18px;
+  border: solid .05px;
+  border-color: #79777740;
+  width: 270px;
+  height: 367px;
+}
+
+.op-tag {
+  position: absolute;
+  right: 28px !important;
+  left: auto !important;
+  top: -4% !important;
+  height: 67px !important;
+  width: 60px !important;
+  border-radius: 20% 0;
+  background-color: var(--primary-color);
+}
+
+.op-tag .notch {
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #3e3e3e;
+  right: -22%;
+  position: absolute;
+}
+
+.op-header {
+  min-height: 3.5rem;
+}
+
+.opportunity-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.sector-lable {
+  font-weight: 500;
+}
+
+.sector-name::before {
+  content: '|';
+  padding-inline: 3px;
+  color: black;
+}
+
+.sector-name {
+  font-weight: 400;
+  color: #000;
+  white-space: nowrap;
+}
+
+.opportunity-count {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  padding-inline: 4px;
+}
+.opportunity-count::before{
+  content: '|';
+  padding-inline: 3px;
+}
+
+.opportunity-count-label {
+  color: var(--primary-color);
+}
+
+.opportunity-jobs {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  padding-inline: 4px;
+}
+.opportunity-jobs::before{
+  content: '|';
+  padding-inline: 3px;
+}
+.opportunity-jobs-label {
+  color: var(--primary-color);
+}
+
+.opportunity-cost {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  padding-inline: 4px;
+}
+.opportunity-cost::before{
+  content: '|';
+  padding-inline: 3px;
+}
+.opportunity-cost-label {
+  color: var(--primary-color);
+}
+.currency{
+  font-size: 0.85rem;
+transform: translateY(3px);
+font-weight: 500;
+}
+p {
+  color: #000;
+  font-size: .8rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+}
+
+a {
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  text-align: center;
+  padding: 3px 35px;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  transition: all ease-in-out 0.5s;
+  background: var(--primary-color);
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  overflow: hidden;
+}

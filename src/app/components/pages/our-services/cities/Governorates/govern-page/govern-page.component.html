@@ -1,0 +1,87 @@
+<!-- Page Breadcumb -->
+<app-first-section
+[title]="governoratePage?.field_governorate_page_title"
+[ImageUrl]="baseUrl+governoratePage?.field_governorate_page_image"
+></app-first-section>
+<!-- Page Breadcumb End -->
+
+<app-governorates-card
+[governorateImageUrl]="baseUrl"
+[governorates]="governorates"
+></app-governorates-card>
+
+<!-- <div class="container page-content">
+  <div class="row mt-90 mb-10">
+    <ng-container *ngFor="let governorate  of governorates let i = index " >
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6  col-xs-6 mb-20 col-6">
+        <a [routerLink]="['/governorates-details/',i]"  >
+          <div class="card govrn-hight" style="
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.009) 11.7%,
+      rgba(0, 0, 0, 0.034) 22.1%,
+      rgba(0, 0, 0, 0.072) 31.2%,
+      rgba(0, 0, 0, 0.123) 39.4%,
+      rgba(0, 0, 0, 0.182) 46.6%,
+      rgba(0, 0, 0, 0.249) 53.1%,
+      rgba(0, 0, 0, 0.32) 58.9%,
+      rgba(0, 0, 0, 0.394) 64.3%,
+      rgb(0 0 0 / 48%) 69.3%,
+      rgb(0 0 0 / 51%) 74.1%,
+      rgb(0 0 0 / 55%) 78.8%,
+      rgb(0 0 0 / 60%) 83.6%,
+      rgb(0 0 0 / 64%) 88.7%,
+      rgb(0 0 0 / 70%) 94.1%,
+      rgb(0 0 0 / 86%) 100%),url({{baseUrl}}{{governorate?.field_governorate_image}});">
+              <div class="content">
+                  <div class="title1">
+                      <h2 class="title" [innerHTML]="governorate?.field_governorate_name"></h2>
+                  </div>
+                  <p class="copy" [innerHTML]="governorate?.summary_details"></p>
+                  <div class="row mb-40">
+                      <div class="col-4">
+                          <strong>{{governorate?.view.length}} </strong>
+                          <div class="justify-content-center">{{'Opportunities' | translate}} </div>
+                      </div>
+                      <div class="col-4">
+                          <strong>{{governorate?.field_population || '0'}}</strong>
+                          <div class="justify-content-center">{{'population' | translate}} </div>
+                      </div>
+                      <div class="col-4">
+                          <strong>{{governorate?.field_workforce|| '0'}}</strong>
+                          <div class="justify-content-center">{{'workforce' | translate}} </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </a>
+      </div>
+    </ng-container>
+  </div>
+
+</div> -->
+
+<!-- <section class="about gray-bg about--style3">
+
+  <div class="container">
+      <div class="row  justify-content-between">
+          <div class="col-lg-6 mb-30">
+              <div class="aboutContent aboutContent--style2">
+
+                  <div class="sectionTitle mb-20">
+
+                      <h2 class="sectionTitle__big">Simple Heading</h2>
+                  </div>
+
+                  <p class="aboutContent__text">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+
+
+              </div>
+          </div>
+          <div class="col-lg-6 aboutThumb3">
+            <img src="assets/image/home/news1.jpg" alt="Gia About">
+        </div>
+      </div>
+  </div>
+</section> -->

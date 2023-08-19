@@ -1,0 +1,20 @@
+<section class="pageBreadcumb pageBreadcumb--style1 position-relative" style="background-image: url({{ImageUrl}})">
+
+
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="pageTitle text-center">
+                  <h6 class="pageTitle__heading text-white text-uppercase mb-25" [innerHTML]="title"></h6>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                           <li ><a>{{'Home' | translate}} / </a></li>
+                          <li class="breadcrumb-item active" aria-current="page" [innerHTML]="title"></li>
+                      </ol>
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+

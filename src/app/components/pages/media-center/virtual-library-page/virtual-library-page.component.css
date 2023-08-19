@@ -1,0 +1,141 @@
+/* Job Section CSS Start */
+
+.job-card {
+  border: 1px solid #0069b3;
+  padding: 20px 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  background: #0069b314;
+  border-radius: 8px;
+  box-shadow: 4px 6px 11px 0px #00000031;
+}
+
+.job-card .thumb-img {
+  /* border: 1px dashed #d9dbdf; */
+  /* max-width: 100%; */
+  height: 100%;
+  text-align: center;
+  line-height: 80px;
+  /* background: #ffffff; */
+}
+
+.job-card .thumb-img img {
+  max-width: 86%;
+}
+
+.job-card .job-info h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.job-card .job-info h3 a {
+  color: #001935;
+}
+
+.job-card .job-info h3 a:hover {
+  color: #f6a400;
+}
+
+.job-card .job-info ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.job-card .job-info ul li {
+  display: block;
+  font-size: 15px;
+  padding-right: 10px;
+  /* margin-bottom: 5px; */
+}
+
+.job-card .job-info ul li:last-child {
+  margin-bottom: 0;
+}
+
+.job-card .job-info ul li a {
+  color: #f6a400;
+  font-weight: 500;
+}
+
+.job-card .job-info ul li i {
+  top: 2px;
+  position: relative;
+  font-size: 18px;
+}
+
+.job-card .job-save {
+  text-align: center;
+}
+
+.job-card .job-save span {
+  background: #ffffff;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #f6a400;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.job-card .job-save a i {
+  color: #afafaf;
+  font-size: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px dashed #afafaf;
+  display: inline-block;
+  margin-bottom: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.job-card .job-save a i:hover {
+  background: #f6a400;
+  color: #ffffff;
+}
+
+.job-card .job-save p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.job-card .job-save p i {
+  border: 0;
+  width: inherit;
+  height: inherit;
+  top: 3px;
+  position: relative;
+  line-height: 1;
+  font-size: 18px;
+}
+
+.job-card:hover {
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  border: 1px dashed #f6a400;
+}
+
+.card-hover-a {
+  display: block;
+  /* height: 104px; */
+}
+
+.job-info {
+  height: 90px;
+}
+
+.date {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+
+/* Job Section CSS End */

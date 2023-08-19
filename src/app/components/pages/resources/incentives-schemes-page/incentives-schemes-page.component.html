@@ -1,0 +1,88 @@
+<!-- Page Breadcumb -->
+<app-first-section [title]="incentivesScheme?.field_incentives_schemes_s1_titl"
+    [ImageUrl]="baseUrl+incentivesScheme?.field_incentives_schemes_s1_imag"></app-first-section>
+<!-- Page Breadcumb End -->
+
+<!-- Overview starts -->
+<section class="feature-area pt-50 pb-70">
+    <div class="container">
+        <div class="row overview">
+            <div class="col-lg-7">
+                <div class="feature-content">
+
+                    <div class="feature-top">
+                        <h4 class="border-b mb-2 pb-1">{{incentivesScheme?.field_incentives_schemes_s2_titl}}</h4>
+                    </div>
+                    <p class="border-b mb-2 pb-2" style="font-weight: 800;"
+                        [innerHTML]="incentivesScheme?.field_header"></p>
+                </div>
+            </div>
+            <div class="col-lg-5 p-5 pt-3 ">
+                <div class="feature-img">
+
+                    <img src="{{baseUrl}}{{incentivesScheme?.field_incentives_schemes_s2_fron}}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="feature-content">
+                <div class="feature-top">
+                    <h4 class="border-b mb-2 pb-1">{{incentivesScheme?.field_incentives_schemes_s1_titl}}</h4>
+                </div>
+
+                <app-services-box [header]="incentivesScheme?.field_incentives_schemes_s2_titl"
+                    [title1]="incentivesScheme?.field_incent_schemes_s3_bx1_titl"
+                    [title2]="incentivesScheme?.field_incent_schemes_s3_bx2_titl"
+                    [title3]="incentivesScheme?.field_incent_schemes_s3_bx3_titl" [icon1]="'fa-globe fa-solid'"
+                    [icon2]="'fa-globe fa-solid'" [icon3]="'fa-globe fa-solid'"
+                    [details1]="incentivesScheme?.field_incentives_schemes_s3_bx1_.slice(0, 100) + (incentivesScheme?.field_incentives_schemes_s3_bx1_.length > 120 ? '...' : '')"
+                    [details2]="incentivesScheme?.field_incentives_schemes_s3_bx2_.slice(0, 100) + (incentivesScheme?.field_incentives_schemes_s3_bx2_.length > 120 ? '...' : '')"
+                    [details3]="incentivesScheme?.field_incentives_schemes_s3_bx3_.slice(0, 100) + (incentivesScheme?.field_incentives_schemes_s3_bx3_.length > 120 ? '...' : '')"></app-services-box>
+
+            </div>
+            <div class=" d-flex justify-content-center text-center my-4 ">
+                <a [href]="baseUrl+ incentivesScheme?.field_incentives_schemes_s3_pdf" type="button" class="btn btn-outline-danger px-4 py-1 fs-5"
+                    [innerHTML]="'Download'|translate"></a>
+            </div>
+        </div>
+
+        <div *ngIf="incentivesScheme?.field_incentives_schemes_s4_titl" class="row pt-5">
+            <div class="col-lg-10">
+                <div class="feature-content">
+
+                    <div class="feature-top">
+                        <h4 class="border-b mb-2 pb-1">{{incentivesScheme?.field_incentives_schemes_s4_titl}}</h4>
+                    </div>
+                    <p class="border-b mb-2 pb-2" style="font-weight: 800;"
+                        [innerHTML]="incentivesScheme?.field_incentives_schemes_s4_desc"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5" *ngIf="incentivesScheme?.field_incentiv_schemes_s5_title">
+            <div class="col-lg-10">
+                <div class="feature-content">
+
+                    <div class="feature-top">
+                        <h4 class="border-b mb-2 pb-1">{{incentivesScheme?.field_incentiv_schemes_s5_title}}</h4>
+                    </div>
+                    <p class="border-b mb-2 pb-2" style="font-weight: 800;"
+                        [innerHTML]="incentivesScheme?.field_incentives_schemes_se5_des"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5" *ngIf="incentivesScheme?.field_incentives_schemes_s6_titl">
+            <div class="col-lg-10">
+                <div class="feature-content">
+
+                    <div class="feature-top">
+                        <h4 class="border-b mb-2 pb-1">{{incentivesScheme?.field_incentives_schemes_s6_titl}}</h4>
+                    </div>
+                    <p class="border-b mb-2 pb-2" style="font-weight: 800;"
+                        [innerHTML]="incentivesScheme?.field_incentives_schemes_s6_desc"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Overview ends -->

@@ -1,0 +1,150 @@
+<!-- Page Breadcumb -->
+
+
+
+<app-first-section [title]="aboutYemen?.field_home_s1_header"
+    [ImageUrl]="baseUrl+aboutYemen?.field_home_s1_image"></app-first-section>
+<!-- Page Breadcumb End -->
+
+
+<section class="feature-area pt-50">
+    <div class="container">
+        <div class="row overview">
+            <div class="col-lg-7">
+                <div class="feature-content ">
+
+                    <div class="feature-top">
+                        <h4 class="border-b mb-2 pb-1">{{aboutYemen?.field_home_s2_box_1_title_}}</h4>
+                    </div>
+                    <!-- <p class="border-b mb-2 pb-2" style="font-weight: 800;"
+                        [innerHTML]=""></p> -->
+                    <p class="aboutContent__text"
+                        [innerHTML]="showFullText ? (aboutYemen?.field_about_yemen_section_2_desc) : (aboutYemen?.field_about_yemen_section_2_desc.length > 600 ? (aboutYemen?.field_about_yemen_section_2_desc.slice(0, 600) + '...') : aboutYemen?.field_about_yemen_section_2_desc)">
+                    </p>
+                    <!-- <span *ngIf="showFullText" [innerHTML]="aboutYemen?.field_about_yemen_section_2_desc.slice(1050)"></span> -->
+                    <a type="button" class="more-btn" *ngIf="aboutYemen?.field_about_yemen_section_2_desc.length > 600"
+                        (click)="showFullText = !showFullText">[ {{ showFullText ?('- Read_less' | translate) : ('+ Show_more' | translate) }} ]</a>
+                    <div >
+                        <button [routerLink]="'/contact-us'" type="button" class="btn btn-outline px-4 py-1 fs-5 mx-2 mb-1"
+                            style="color: #e89c00;border-color: var(--secondary-color);font-weight: 600; " [innerHTML]="'Contact_us'|translate"></button>
+                        <button [routerLink]="'/opportunities'" class="btn btn-primary px-4 py-1 fs-5 danger mx-2"
+                            style="border-color: var(--primary-color);font-weight: 600;" [innerHTML]="'OPPORTUNITIES'|translate"></button>
+                            <button [routerLink]="'/sectors'" class="btn btn-secondary px-4 py-1 fs-5 danger mx-2"
+                            style="border-color: var(--secondary-color);background-color: var(--secondary-color);font-weight: 600;" [innerHTML]="'SECTORS IN YEMEN'|translate">كل
+                            المناطق</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 p-3 ">
+                <div class="feature-img">
+
+                    <img src="{{baseUrl}}{{aboutYemen?.field_home_s3_front_image}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= About Us Section ======= -->
+
+<!-- ======= Tabs Section ======= -->
+<!-- <section id="tabs" class="tabs">
+  <div class="container" data-aos="fade-up">
+
+      <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-3">
+              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                  <i class="ri-gps-line"></i>
+                  <h4 class="d-none d-lg-block" [innerHTML]="aboutYemen.field_about_yemen_box_1_title" ></h4>
+              </a>
+          </li>
+          <li class="nav-item col-3">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                  <i class="ri-body-scan-line"></i>
+                  <h4 class="d-none d-lg-block" [innerHTML]="aboutYemen.field_about_yemen_box_2_title" ></h4>
+              </a>
+          </li>
+          <li class="nav-item col-3">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <i class="ri-sun-line"></i>
+                  <h4 class="d-none d-lg-block" [innerHTML]="aboutYemen.field_about_yemen_box_3_title" ></h4>
+              </a>
+          </li>
+          <li class="nav-item col-3">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                  <i class="ri-store-line"></i>
+                  <h4 class="d-none d-lg-block"[innerHTML]="aboutYemen.field_about_yemen_box_4_title" ></h4>
+              </a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+              <div class="row">
+                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+
+
+                   <p class="fst-italic" [innerHTML]="showFullText2 ? (aboutYemen?.field_about_yemen_box_1_details) : (aboutYemen?.field_about_yemen_box_1_details.length > 700 ? (aboutYemen?.field_about_yemen_box_1_details.slice(0, 700) + '...') : aboutYemen?.field_about_yemen_box_1_details)"></p>
+                  <span *ngIf="showFullText2" [innerHTML]="aboutYemen?.field_about_yemen_box_1_details.slice(700)"></span>
+                  <a type="button" *ngIf="aboutYemen.field_about_yemen_box_1_details.length > 700" (click)="showFullText2 = !showFullText2">{{ showFullText2 ?('Read_less' | translate) : ('Show_more' | translate) }}</a>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+              <div class="row">
+                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+
+
+
+                      <p class="fst-italic" [innerHTML]="showFullText3 ? (aboutYemen?.field_about_yemen_box_2_details) : (aboutYemen?.field_about_yemen_box_2_details.length > 700 ? (aboutYemen?.field_about_yemen_box_2_details.slice(0, 700) + '...') : aboutYemen?.field_about_yemen_box_2_details)"></p>
+                      <span *ngIf="showFullText3" [innerHTML]="aboutYemen?.field_about_yemen_box_2_details.slice(700)"></span>
+                      <a type="button" *ngIf="aboutYemen.field_about_yemen_box_2_details.length > 700" (click)="showFullText3 = !showFullText3">{{ showFullText3 ?('Read_less' | translate) : ('Show_more' | translate) }}</a>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+              <div class="row">
+                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+
+
+                      <p class="fst-italic" [innerHTML]="showFullText4 ? (aboutYemen?.field_about_yemen_box_3_details) : (aboutYemen?.field_about_yemen_box_3_details.length > 700 ? (aboutYemen?.field_about_yemen_box_3_details.slice(0, 700) + '...') : aboutYemen?.field_about_yemen_box_3_details)"></p>
+                      <span *ngIf="showFullText4" [innerHTML]="aboutYemen?.field_about_yemen_box_3_details.slice(700)"></span>
+                      <a type="button" *ngIf="aboutYemen.field_about_yemen_box_3_details.length > 700" (click)="showFullText4 = !showFullText4">{{ showFullText4 ?('Read_less' | translate) : ('Show_more' | translate) }}</a>
+
+
+                  </div>
+
+              </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+              <div class="row">
+                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+
+
+
+                      <p class="fst-italic" [innerHTML]="showFullText5 ? (aboutYemen?.field_about_yemen_box_4_details) : (aboutYemen?.field_about_yemen_box_4_details.length > 700 ? (aboutYemen?.field_about_yemen_box_4_details.slice(0, 700) + '...') : aboutYemen?.field_about_yemen_box_4_details)"></p>
+                      <span *ngIf="showFullText5" [innerHTML]="aboutYemen?.field_about_yemen_box_4_details.slice(700)"></span>
+                      <a type="button" *ngIf="aboutYemen.field_about_yemen_box_4_details.length > 700" (click)="showFullText5 = !showFullText5">{{ showFullText5 ?('Read_less' | translate) : ('Show_more' | translate) }}</a>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+  </div>
+</section> -->
+<!-- End Tabs Section -->
+
+<app-tabs [hasHead]="true" [paragraphTitle]="aboutYemen?.field_tabs_title"
+    [paragraphContent]="aboutYemen?.field_tab_description"
+    [tabs]='tabs'></app-tabs>

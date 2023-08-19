@@ -1,0 +1,53 @@
+
+<div class="container page-content">
+    <div class="row mt-90 mb-10">
+      <ng-container *ngFor="let governorate  of governorates let i = index " >
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-20 ">
+          <a [routerLink]="['/governorates-details/',i]"  >
+
+
+
+            <div class="card-container">
+
+                <div class="card">
+                    <div class="card-header" style="background-image: url({{governorateImageUrl}}{{governorate?.field_governorate_image}})" >
+                
+                            <div class="card-header-slanted-edge">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
+                            </div>
+                    </div>
+                
+                    <div class="card-body p-3 pt-1">
+                        <p class="name"  [innerHTML]="governorate?.field_governorate_name"></p>
+                     
+                        <div class="bio"  [innerHTML]="governorate?.summary_details"></div>
+                
+                    </div>
+                
+                    <div class="card-footer">
+                        <div class="stats">
+                        <div class="stat">
+                            <span class="label">{{'workforce' | translate}} </span>
+                            <span class="value" data-value="56" >{{governorate?.field_workforce|| '0'}}</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">{{'population' | translate}}</span>
+                            <span class="value" data-value="5" >{{governorate?.field_population || '0'}}</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">{{'Opportunities' | translate}} </span>
+                            <span class="value" data-value="320" >{{governorate?.view?.length}}</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                </div>
+
+</a>
+</div>
+</ng-container>
+</div>
+
+</div>

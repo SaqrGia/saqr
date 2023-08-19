@@ -1,0 +1,60 @@
+body[dir="rtl"] {
+  direction: rtl;
+}
+
+.navbar {
+  text-align: right;
+}
+
+.navbar-nav {
+  margin-right: auto;
+}
+
+.navbar-toggler {
+  float: left;
+}
+
+.fa-align-right {
+  display: inline-block;
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+img .ngx-loading-logo .center-center {
+  width: 200px !important;
+  height: 150px !important;
+}
+
+
+.router-outlet {
+  position: relative;
+}
+
+.router-outlet.ng-enter,
+.router-outlet.ng-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.router-outlet.ng-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.router-outlet.ng-enter-active,
+.router-outlet.ng-leave-active {
+  transition: all 300ms ease-out;
+}
+
+.router-outlet.ng-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.router-outlet.ng-leave-active {
+  transform: translateX(-100%);
+  opacity: 0;
+}

@@ -1,0 +1,16 @@
+
+    <div class="news-card">
+        <div class="news-date text-center">
+            <div class="day">{{ date| date:'dd' }}</div>
+            <div class="month">{{ (date | date:'MMMM')!| translate}}</div> 
+        </div>
+        <img class="img-fluid w-100 news-card-img" [src]="imageUrl" alt="" loading="lazy">
+        <div class="news-card-inner pt-3 p-2">
+            <h3 title="{{title}}" [innerHTML]="title"></h3>
+            <p [innerHTML]="content">
+</p>
+            <a class="btn btn-primary-fill btn-knowmore" [href]="targetUrl">{{'Show More' | translate}} &nbsp;
+                <span class="arow-icon"><img class="img-fluid" src="/assets/image/know-more-black.png" alt=""></span>
+           </a>
+        </div>
+    </div>

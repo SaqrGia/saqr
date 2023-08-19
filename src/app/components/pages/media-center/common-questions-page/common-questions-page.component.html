@@ -1,0 +1,59 @@
+ <!-- Page Breadcumb -->
+ <app-first-section
+ [title]="commonQuestionsPage?.field_common_question_page_title"
+ [ImageUrl]="baseUrl+commonQuestionsPage?.field_common_question_page_image"
+ ></app-first-section>
+<!-- Page Breadcumb End -->
+
+
+
+
+
+<section class="donation pt-130 pb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-30">
+        <div class="innerWrapperSidebar mb-30">
+          <div class="sidebarWidget">
+            <div class="sidebarTitle">
+              <h5 class="sidebarTitle__heading text-uppercase mb-30" [innerHTML]="'categories'|translate"></h5>
+            </div>
+            <div class="sidebarCategories">
+              <ul>
+                <ng-container  *ngFor="let question of commonQuestions" [class.selected]="question === selectedQuestion">
+                <li>
+                  <a type="button" (click)="onSelect(question)">
+                    <span [innerHTML]="question?.name"></span>
+                    <span>{{question?.view.length}}</span>
+                  </a>
+                </li>
+              </ng-container>
+              </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+      <div class="col-lg-8 mb-30">
+        <div class="ccFaqBlock">
+          <div class="accordion" id="accordionExample">
+            <ng-container *ngFor="let view of selectedQuestion?.view; let i = index">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading{{i}}">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" [attr.aria-expanded]="i === 0" [attr.aria-controls]="'collapse' + i">
+                    {{view.field_common_question_title}}
+                  </button>
+                </h2>
+                <div [ngClass]="{'accordion-collapse': true, 'collapse': i !== 0, 'show': i === 0}" [attr.id]="'collapse' + i" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionExample">
+                  <div class="accordion-body" [innerHTML]="view.field_common_ques_details_answer">
+
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

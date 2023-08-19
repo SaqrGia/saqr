@@ -1,0 +1,23 @@
+    <div class="card">
+    <div class="card__image-container">
+        <img class="card__image"
+        [src]="baseUrl+ model.field_sirur_image"
+        alt="">
+    </div>
+    <div class="card_slider">
+        <div style="padding: 0 12px 16px 12px;">
+            <div class="card__content">
+                <h1 class="card__title">{{model.field_sirur_title}}</h1>
+                 <p [innerHTML]="model.field_sirur_details"></p>
+            </div>
+            <div class="control animated bounceInLeft ">
+                <a class="btn" [href]="baseUrl +'/'+ model.download_url">
+                    <span class="price">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </span>
+                    <span class="buy">{{"Download"|translate}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

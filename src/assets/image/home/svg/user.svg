@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.721" height="16.367" viewBox="0 0 15.721 16.367">
+    <defs>
+        <style>
+            .cls-1{fill:#ec7509;stroke:#f6a400;stroke-miterlimit:10;stroke-width:.4px}
+        </style>
+    </defs>
+    <g id="Group_2841" data-name="Group 2841" transform="translate(-1023.854 -1169.8)">
+        <path id="Shape" d="M4.133 8.266a4.133 4.133 0 1 1 4.134-4.133 4.138 4.138 0 0 1-4.134 4.133zm0-7.7A3.568 3.568 0 1 0 7.7 4.133 3.572 3.572 0 0 0 4.133.565z" class="cls-1" transform="translate(1027.58 1170)"/>
+        <path id="Shape-2" d="M13.48 6.127H1.842A1.811 1.811 0 0 1 0 4.313C0 3.113 1.376 0 7.661 0s7.661 3.113 7.661 4.313a1.811 1.811 0 0 1-1.842 1.814zM7.661.565C1.869.565.565 3.34.565 4.313a1.238 1.238 0 0 0 1.277 1.249H13.48a1.238 1.238 0 0 0 1.277-1.249c0-.973-1.304-3.748-7.096-3.748z" class="cls-1" data-name="Shape" transform="translate(1024.053 1179.84)"/>
+    </g>
+</svg>

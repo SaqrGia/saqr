@@ -1,0 +1,50 @@
+<div class="opportunity-card">
+  <div class="op-tag">
+    <div class="notch">
+    </div>
+  </div>
+  <div class="op-header">
+    <span class="opportunity-title" [innerHTML]="opportunityName"></span>
+  </div>
+  <table>
+    <tr>
+      <td class="sector-lable">{{'Opportunities_Cities' | translate}}</td>
+      <td class="sector-name" [innerHTML]="OpportunityCity"></td>
+    </tr> 
+    <tr>
+      <td class="sector-lable">{{'Opportunities_sector' | translate}}</td>
+      <td class="sector-name" [innerHTML]="OpportunitySector"></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <span class="opportunity-count-label">{{'Opportunities Count' | translate}}</span>
+      <span class="opportunity-count"[innerHTML]="OpportunityCount"></span>
+
+    </tr>
+    <tr>
+      <span class="opportunity-jobs-label">{{'Jobs Opportunities' | translate}}</span>
+      <span class="opportunity-jobs"[innerHTML]="JobsOpportunities"></span>
+
+    </tr>
+    <tr>
+      <span class="opportunity-cost-label">{{'cost' | translate}}</span>
+      <span class="opportunity-cost" [innerHTML]="getCost()"></span>
+      <span class="currency" [innerHTML]="getCurency()|translate"></span>
+    </tr>
+  </table>
+
+  <p [innerHTML]="field_opportunities_details.slice(0,150)"></p>
+  <div class="buttons justify-content-center">
+    <a *ngIf="haveDownload" [href]=downloadUrl>{{'Download' | translate}}</a>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+

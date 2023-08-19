@@ -1,0 +1,5 @@
+.scroll{
+    min-height: 279px;
+    overflow: auto;
+    max-height: 279px;
+}

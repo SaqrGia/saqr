@@ -1,0 +1,281 @@
+<!-- Page Breadcumb -->
+<app-first-section [title]="governorateDetails?.field_governorate_name"
+    [ImageUrl]="baseUrl+governorateDetails?.field_govern_s1_back_image_"></app-first-section>
+<!-- Page Breadcumb End -->
+<!-- About && Features && Donner Section -->
+
+<!-- Overview starts -->
+<section class="about-us pt-0 mt-80">
+    <div class="container">
+        <div class="about-image-box">
+            <div class="row d-flex ">
+                <div class="col-lg-6 mb-4 ps-4">
+                    <div class="about-content  mb-4">
+                        <!-- <h5 class="border-b mb-2 pb-1" title2 > {{'details' | translate}}</h5> -->
+                        <!-- <p class="border-b mb-2 pb-2" style="font-weight: 700;"  [innerHTML]="governorateDetails.field__governorate_details_forma"> </p> -->
+                        <p class="aboutContent__text"
+                            [innerHTML]="showFullText ? (governorateDetails?.field__governorate_details_forma) : (governorateDetails?.field__governorate_details_forma.length > 700 ? (governorateDetails?.field__governorate_details_forma.slice(0, 700) + '...') : governorateDetails?.field__governorate_details_forma)">
+                        </p>
+                        <!-- <span *ngIf="showFullText" [innerHTML]="governorateDetails?.field__governorate_details_forma.slice(700)"></span> -->
+                        <a type="button" *ngIf="governorateDetails?.field__governorate_details_forma?.length > 700"
+                            (click)="showFullText = !showFullText">{{ showFullText ?('Read_less' | translate) :
+                            ('Show_more' | translate) }}</a>
+
+                        <div class="entry-button d-flex align-items-centermb-2">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4 pe-4">
+
+                    <img src="{{baseUrl}}{{governorateDetails?.field_govern_s2_details_images_}}" alt="" style="
+                  border-radius: 10px;
+                  box-shadow: 2px 4px 20px 0px #808080b5;">
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class="white-overlay"></div> -->
+</section>
+<!-- Overview ends -->
+
+
+
+
+<app-tabs [hasHead]="false" [tabs]="[
+{title:governorateDetails?.field_gov_title_1_data_details_,content:governorateDetails?.field_gov_details_1_data_details},
+{title:governorateDetails?.field_gov_title_2_data_details_,content:governorateDetails?.field_gov_details_2_data_details},
+{title:governorateDetails?.field_gov_title_3_data_details_,content:governorateDetails?.field_gov_details_3_data_details},
+{title:governorateDetails?.field_gov_title_4_data_details_,content:governorateDetails?.field_gov_details_4_data_details},
+]" [title]="governorateDetails?.field_gov_title_1_data_details_"></app-tabs>
+
+<section class="review pt-110 pb-60 position-relative overflow-hidden">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 justify-content-center">
+                <!-- Section Heading/Title -->
+                <div class="sectionTitle mb-65">
+                    <h2 class=" title2" [innerHTML]="governorateDetails?.field__governorate_s4_title"></h2>
+                </div>
+                <!-- Section Heading/Title End -->
+                <div class="reviewMap mb-50">
+                    <img src="{{baseUrl}}{{governorateDetails?.field_governorate_s4_image}}" alt="Gia Map">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- opertinities starts -->
+<section class="trending-podcast-section section-padding  pb-5">
+    <div class="container">
+        <div class="section-title mb-6 w-75 mx-auto text-center mb-5">
+            <!-- <h4 class="mb-1 theme1">Opportunities</h4> -->
+            <h2 class="mb-1 title2">{{'Investment_Opportunities' | translate}}<span class="theme"></span></h2>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+        </p> -->
+        </div>
+        <div class="row">
+
+
+            <ng-container *ngIf="opportunities && opportunities?.length > 0">
+                <div class="row">
+
+                    <ng-container *ngFor="let opportunity  of opportunities let i2 = index ">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 col-xs-12 mb-6 mb-lg-0 card-center ">
+                            <a type="button" (click)="showDetails(i2)">
+
+                              
+                                    <app-opportunities
+                                    [opportunityName]="opportunity?.field_opportunity_name"
+                                    [OpportunityCount]="opportunity?.field_number_of_opportunities"
+                                    [OpportunityCost]="opportunity?.field_opportunity_cost_as_string"
+                                    [OpportunityCity]="opportunity?.field_governorate_1"
+                                    [OpportunitySector]="opportunity?.field_sector"
+                                    [field_opportunities_details]="opportunity?.field_opportunities_details"
+                                    [haveDownload]="opportunity?.field_detail_file"
+                                    [downloadUrl]="baseUrl+opportunity?.field_detail_file"
+                                    [JobsOpportunities]="opportunity?.field_opportunities_employment"
+                                    ></app-opportunities>
+                            </a>
+                        </div>
+
+                    </ng-container>
+
+
+
+
+                </div>
+            </ng-container>
+            <p *ngIf="opportunities?.length === 0">No results found.</p>
+
+        </div>
+
+
+    </div>
+</section>
+<!-- opertinities ends -->
+
+
+
+<!-- Overview starts -->
+<!-- <section class="about-us pt-0 mt-80">
+  <div class="container">
+      <div class="about-image-box">
+          <div class="row d-flex align-items-center justify-content-between">
+              <div class="col-lg-6 mb-4 pe-4">
+
+                  <img src="assets/image/home/news3.jpg" alt="" style="
+                  border-radius: 10px;
+                  box-shadow: 2px 4px 20px 0px #808080b5;">
+
+              </div>
+              <div class="col-lg-6 mb-4 ps-4">
+                  <div class="about-content  mb-4">
+                      <h2 class="border-b mb-2 pb-1">Simple heading</h2>
+                      <p class="border-b mb-2 pb-2" style="font-weight: 700;">Invest in Yemen is the official investment marketing initiative for the sultanate. Managed by Ministry of Commerce, Industry & Investment Promotion, We promote Yemen as a base for businesses & support and facilitate those interested
+                          in locating here.</p>
+                      <div class="entry-button d-flex align-items-centermb-2">
+
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+</section> -->
+<!-- Overview ends -->
+
+<!--
+<section class="trending-podcast-section section-padding">
+  <div class="container">
+      <div class="row">
+
+          <div class="col-lg-12 col-12">
+              <div class="section-title-wrap mb-5">
+                  <h4 class="section-title">Top Sectors</h4>
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+              <div class="custom-block custom-block-full">
+                  <div class="custom-block-image-wrap">
+                      <a >
+                          <img src="assets/image/gallery/gallery-7.jpg" class="custom-block-image img-fluid" alt="">
+                      </a>
+                  </div>
+                  <h5 class="mb-2">
+                      <a >
+                       Yemen
+                    </a>
+                  </h5>
+                  <div class="custom-block-info">
+
+
+                      <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                      <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                          <a href="#" class="bi-headphones me-1">
+                              <span>100k</span>
+                          </a>
+
+                          <a href="#" class="bi-heart me-1">
+                              <span>2.5k</span>
+                          </a>
+
+                          <a href="#" class="bi-chat me-1">
+                              <span>924k</span>
+                          </a>
+                      </div>
+                  </div>
+
+
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+              <div class="custom-block custom-block-full">
+                  <div class="custom-block-image-wrap">
+                      <a href="detail-page.html">
+                          <img src="assets/image/home/1.jpg" class="custom-block-image img-fluid" alt="">
+                      </a>
+                  </div>
+                  <h5 class="mb-2">
+                      <a href="detail-page.html">
+                       Yemen
+                    </a>
+                  </h5>
+                  <div class="custom-block-info">
+
+
+
+                      <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                      <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                          <a href="#" class="bi-headphones me-1">
+                              <span>100k</span>
+                          </a>
+
+                          <a href="#" class="bi-heart me-1">
+                              <span>2.5k</span>
+                          </a>
+
+                          <a href="#" class="bi-chat me-1">
+                              <span>924k</span>
+                          </a>
+                      </div>
+                  </div>
+
+
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-12">
+              <div class="custom-block custom-block-full">
+                  <div class="custom-block-image-wrap">
+                      <a href="detail-page.html">
+                          <img src="assets/image/home/news3.jpg" class="custom-block-image img-fluid" alt="">
+                      </a>
+                  </div>
+                  <h5 class="mb-2">
+                      <a href="detail-page.html">
+                       Yemen
+                    </a>
+                  </h5>
+                  <div class="custom-block-info">
+
+                      <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                      <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                          <a href="#" class="bi-headphones me-1">
+                              <span>100k</span>
+                          </a>
+
+                          <a href="#" class="bi-heart me-1">
+                              <span>2.5k</span>
+                          </a>
+
+                          <a href="#" class="bi-chat me-1">
+                              <span>924k</span>
+                          </a>
+                      </div>
+                  </div>
+
+
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section> -->

@@ -1,0 +1,47 @@
+
+
+<app-first-section
+[title]="reportPage?.field_reports_s1_title"
+[ImageUrl]="baseUrl2+reportPage?.field_reports_s1_image"
+></app-first-section>
+<!-- Page Breadcumb End -->
+
+<!-- Design -->
+<section class="design-area two pt-100 pb-70">
+</section>
+<!-- End Design -->
+
+<!-- Search Bar Start -->
+<div class="main-banner">
+  <div class="container">
+      <div class="row">
+
+      
+      </div>
+  </div>
+</div>
+<!-- Search Bar End -->
+
+
+<!-- sIRUReports start -->
+<section class="trending pt-4 pb-4 bg-lgrey">
+  <div class="container">
+      <div class="section-title mb-6 w-75 mx-auto text-center">
+          <h2 class="mb-1"> <span class="theme" [innerHTML]="reportPage?.field_reports_s3_title"></span></h2>
+          <p [innerHTML]="reportPage?.field_reports_s3_description"></p>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="row cards-container">
+                    <app-pdf-download-card   *ngFor="let info of sIRUReports | paginate: { itemsPerPage: itemsPerPage, currentPage: p }" [model]="info" model.download_url="hello">
+                    </app-pdf-download-card>
+              </div>
+
+          </div>
+      </div>
+      <div class="pagination-area">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+  </div>
+</section>
+<!-- sIRUReports end -->

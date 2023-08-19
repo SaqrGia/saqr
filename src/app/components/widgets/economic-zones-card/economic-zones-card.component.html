@@ -1,0 +1,32 @@
+<div class="box" >
+    <div class="imgBx">
+        <img src="{{image}}" alt="">
+        <div class="names">
+            <h1 [innerHTML]="title"></h1>
+            <p  [innerHTML]="details"></p>
+        </div>
+    </div>
+    <div class="skills">
+        <div class="details">
+            <div class="text">
+                <span>{{'Opportunities' | translate}}  </span>
+                <span>{{OpportunitiesTotal}}</span>
+            </div>
+            <hr class="mb-0 mt-0" />
+        </div>
+        <div class="details">
+            <div class="text">
+                <span> {{'workforce' | translate}}</span>
+                <span>{{OpportunityWorkforce}}</span>
+            </div>
+            <hr class="mb-0 mt-0" />
+        </div>
+        <div class="details">
+            <div class="text">
+                <span>{{'cost' | translate}}</span>
+                <span>{{OpportunityCost}}</span>
+            </div>
+            <hr class="mb-0 mt-0" />
+        </div>
+    </div>
+</div>

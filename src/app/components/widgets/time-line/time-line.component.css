@@ -1,0 +1,215 @@
+
+/* --------------------------------------
+   8. Roadmaap
+-----------------------------------------*/
+
+.roadmap {
+    padding-top: 120px;
+    padding-bottom: 115px;
+}
+
+.roadmap .roadmap-items {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 0 40px;
+}
+
+.roadmap-items:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(124deg,#5a6ff9,#0069b3,#f97320);
+    /* border: 0.5px solid #27344c; */
+    width: 5px;
+    height: 108%;
+}
+
+.roadmap-item {
+    position: relative;
+    color: rgb(6, 1, 255);
+    width: 48%;
+    padding: 0 40px;
+    margin-bottom: 117px;
+}
+
+.roadmap-item.right {
+    margin-top: 90px;
+    margin-bottom: -130px;
+}
+
+.roadmap-item::before {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 40px;
+    display: block;
+    width: 27px;
+    border: 1px dashed #0069b3;
+}
+
+.roadmap-item.right::before {
+    left: 12px;
+    right: auto;
+}
+
+.roadmap-item::after {
+    content: "";
+    position: absolute;
+    right: 6px;
+    top: 36px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #0069b3;
+    border-radius: 50%;
+    -webkit-transition: all .2s cubic-bezier(.47, 0, .745, .715);
+            transition: all .2s cubic-bezier(.47, 0, .745, .715);
+    -webkit-animation: pulse .7s infinite cubic-bezier(.66, 0, 0, 1);
+            animation: pulse .7s infinite cubic-bezier(.66, 0, 0, 1);
+    -webkit-box-shadow: 0 0 0 0 rgba(54, 32, 249, 0.6);
+            box-shadow: 0 0 0 0 rgba(65, 32, 249, 0.6);
+}
+
+.roadmap-item.right::after {
+    right: auto;
+    left: 6px;
+}
+
+@-webkit-keyframes pulse
+{
+    to
+    {
+        -webkit-box-shadow: 0 0 0 7px rgba(249, 84, 32, 0);
+                box-shadow: 0 0 0 7px rgba(249, 84, 32, 0);
+    }
+}
+
+@keyframes pulse
+{
+    to
+    {
+        -webkit-box-shadow: 0 0 0 7px rgba(249, 84, 32, 0);
+                box-shadow: 0 0 0 7px rgba(249, 84, 32, 0);
+    }
+}
+
+.roadmap-item-inner {
+    position: relative;
+    /* background: rgb(4 0 255 / 10%); */
+    border: 2px solid #0069b3;
+    padding: 35px 30px;
+    border-radius: 24px;
+    z-index: 1;
+}
+
+
+.roadmap-item-inner h4 {
+    font-size: 20px;
+    color: #0069b3;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.roadmap-item-inner p {
+    color: #0a0a0a;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+   /*----- Roadmap ----*/
+   .roadmap .roadmap-items {
+    padding: 0;
+}
+}
+ 
+
+    @media (max-width: 767.98px) {
+        /*----- Roadmap ----*/
+ .roadmap {
+    padding-top: 90px;
+    padding-bottom: 42px;
+}
+
+.roadmap .roadmap-items {
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.roadmap-items:before {
+    left: 0;
+    height: 102%;
+}
+
+.roadmap-item {
+    margin-left: 44px;
+    margin-bottom: 30px;
+    padding: 0;
+    width: 100%;
+}
+
+.roadmap-item.right {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.roadmap-item::before,
+.roadmap-item.right::before {
+    right: auto;
+    left: -41px;
+}
+
+.roadmap-item::after,
+.roadmap-item.right::after {
+    right: auto;
+    left: -15px;
+}
+    }
+ 
+
+
+
+    
+
+
+/* -----home title style---------------- */
+.title2{
+    position: relative;
+      padding-bottom: 14px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 38px;
+  }
+   .title2:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #0071ba;
+      border-radius: 3px;
+  }
+  
+   .title2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+      transform: translateX(30px);
+    width: 10px;
+    height: 3px;
+    background-color: #f5931d;
+      border-radius: 3px;
+  }
+  

@@ -1,0 +1,23 @@
+<ngx-ui-loader style="width: 200px;" ></ngx-ui-loader>
+<main class="main main--wrapper4" [style]="getStyle()">
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+</main>
+<div class="offcanvas offcanvas-bottom bg-black text-white show"
+style="height: auto !important; --bs-bg-opacity: .85; visibility: visible;"
+tabindex="-1" id="offcanvas" data-bs-scroll="true" data-bs-backdrop="false" aria-labelledby="offcanvasLabel"
+aria-modal="true" role="dialog">
+<div class="offcanvas-body d-flex flex-column flex-sm-row align-items-center justify-content-around gap-3">
+    <div class="small">
+        {{'We use cookies to ensure that we give you the best experience on our website. If you continue to use this site, we will assume that you are happy with it.'|translate}}
+    </div>
+    <div class="text-nowrap">
+        <button type="button" class="btn btn-sm btn-primary mx-1" data-bs-dismiss="offcanvas"
+            aria-label="Close" onclick="">{{'OK'|translate}}</button>
+        <a type="button" href="/contact-us" target="_blank"
+            class="btn btn-sm btn-secondary text-nowrap" aria-label="Close">{{'Privacy Policy'|translate}}</a>
+    </div>
+</div>
+</div>
+

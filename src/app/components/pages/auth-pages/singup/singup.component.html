@@ -1,0 +1,133 @@
+
+<div class="container-xxl">
+  <div class="authentication-wrapper authentication-basic container-p-y">
+    <div class="authentication-inner">
+      <!-- Register Card -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Logo -->
+          <div class="app-brand justify-content-center">
+            <a href="#" class="app-brand-link gap-2">
+              <span class="app-brand-logo demo">
+                <img src="assets/image/logos/logo-gia.png" style=" height:80px; width: 120px;"  />
+              </span>
+              <!-- <span class="app-brand-text demo text-body fw-bolder">Invest Yemen</span> -->
+            </a>
+          </div>
+          <!-- /Logo -->
+          <h5 class="mb-2">Adventure starts here 🚀</h5>
+          <p class="mb-3">Make your invest management easy and fun!</p>
+
+          <form  class=" p-2 row" [formGroup]="signupForm" >
+
+            <div class="mb-2 col-6 col-md-6" >
+              <label  class="form-label">First Name</label>
+              <input
+              formControlName="First_Name"
+                type="text"
+                class="form-control"
+                placeholder="Your first name"
+                autofocus
+              />
+              <small *ngIf="signupForm.controls['First_Name'].dirty && signupForm.hasError('required','First_Name')" class="text-danger">*First Name is required</small>
+            </div>
+
+              <div class="mb-2 col-6 col-md-6" >
+                <label  class="form-label">Last Name</label>
+                <input
+                formControlName="Last_Name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Your last name"
+
+                />
+                <small *ngIf="signupForm.controls['Last_Name'].dirty && signupForm.hasError('required','Last_Name')" class="text-danger">*Last Name is required</small>
+              </div>
+            <div class="mb-2" >
+              <label for="email" class="form-label">Email</label>
+              <input formControlName="E_Mail" type="email" class="form-control"  placeholder="name@example.com"  />
+              <small *ngIf="signupForm.controls['E_Mail'].dirty && signupForm.hasError('required','E_Mail')" class="text-danger">*Email is required</small>
+            </div>
+            <div class="mb-2 col-6 col-md-6 form-password-toggle">
+              <label class="form-label " for="password">Password</label>
+              <div class="input-group input-group-merge">
+                <input
+                formControlName="Password"
+                  [type]="typeP"
+
+                  class="form-control"
+
+                  placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+
+                />
+                <span (click)="hideShowPass()"class="input-group-text cursor-pointer bx {{eyeIcon}}"></span>
+              </div>
+
+              <small *ngIf="signupForm.controls['Password'].dirty && signupForm.hasError('required','Password')" class="text-danger">*Password is required</small>
+
+            </div>
+            <!-- <div class="mb-3 col-6 col-md-6 form-password-toggle">
+              <label class="form-label">Confirm Password</label>
+              <div class="input-group input-group-merge">
+                <input
+
+                  [type]="typeCPass"
+
+                  class="form-control"
+
+                  placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+
+                />
+                <span (click)="hideShowCPass()"class="input-group-text cursor-pointer bx {{eyeIcon2}}"></span>
+              </div>
+
+            </div> -->
+            <div class="mb-3 col-6 col-md-6">
+              <label for="Country" class="form-label">Country</label>
+              <select class="form-control" name="country" id="country"  formControlName="Country"   >
+                <option value="" disabled selected>Select Country</option>
+                <option *ngFor="let country of countries" [value]="country.name">{{country.name}}</option>
+            </select>
+            <small *ngIf="signupForm.controls['Country'].dirty && signupForm.hasError('required','Country')" class="text-danger">*country is required</small>
+            </div>
+            <div class="mb-3 col-6 col-md-6">
+              <label  class="form-label">Phone</label>
+              <input
+              formControlName="Telephone"
+                type="tel"
+                class="form-control"
+
+                placeholder="Your Phone Number"
+                autofocus
+              />
+              <small *ngIf="signupForm.controls['Telephone'].dirty && signupForm.hasError('required','Telephone')" class="text-danger">*Phone is required</small>
+            </div>
+
+
+            <div class="mb-3">
+              <div class="form-check">
+                <input  class="form-check-input " type="checkbox" id="terms-conditions" name="terms" aria-describedby="invalidCheck3Feedback" />
+                <label class="form-check-label" for="terms-conditions">
+                  I agree to
+                  <a href="">privacy policy & terms</a>
+                </label>
+                <br>
+                <small *ngIf="signupForm.controls['Telephone'].dirty && signupForm.hasError('required','Telephone')" class="text-danger">*You must agree before submitting</small>
+
+              </div>
+            </div>
+            <button (click)="onSignUp()" class="btn btn-primary d-grid w-100">Sign up</button>
+          </form>
+
+          <p class="text-center">
+            <span>Already have an account?</span>
+            <a routerLink="/login">
+              <span>Sign in instead</span>
+            </a>
+          </p>
+        </div>
+      </div>
+      <!-- Register Card -->
+    </div>
+  </div>
+</div>

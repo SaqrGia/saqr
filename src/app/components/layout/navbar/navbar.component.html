@@ -1,0 +1,330 @@
+<header [style]="get_navIcon()">
+  <div id="header-sticky" [ngClass]="headerSticky ? 'header__area header__border-2  header__sticky header__transparent header-sticky' : 'header__area header__border-2 header__sticky header__transparent'">
+      <div class="container tp-container">
+          <div class="header__wrapper p-relative">
+              <div class="row align-items-center" style="display: flex;">
+                  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-5 col-6" style="padding: 0;padding-inline-start: 20px;">
+                      <div class="logo header__logo">
+                          <a [routerLink]="['/']">
+                              <img class="logo-white" src="assets/image/logos/Logo gia.png" alt="logo">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 d-none d-lg-block" >
+                      <div class="header__menu-wrapper d-flex align-items-center" [style]="getStyle()">
+                          <div class="main-menu">
+                              <nav id="mobile-menu" class="d-none d-md-block">
+                                  <ul>
+
+                                      <!-- Why Yemen? -->
+
+                                      <li class="has-dropdown mm-collapsed" aria-expanded="false">
+                                          <a>{{ 'Why_Yemen' | translate }}</a>
+                                          <ul class="submenu mm-collapse" [style]="getStyle_posi_submenu()">
+                                              <li><a [routerLink]="['about-yemen']">{{ 'About_Yemen' | translate }}</a></li>
+                                              <li><a [routerLink]="['economic-profiles']">{{ 'Economic_profiles' | translate }}</a>
+                                              </li>
+
+                                          </ul>
+
+                                      </li>
+
+                                      <!-- Our Services -->
+                                      <li class="has-dropdown mm-collapsed" aria-expanded="false">
+                                          <a>{{ 'Our_Services' | translate }}</a>
+                                          <ul class="submenu mm-collapse" [style]="getStyle_posi_submenu()">
+                                              <li><a [routerLink]="['service-package']">{{ 'Service_package' | translate }}</a></li>
+                                              <li class=" mm-collapsed" aria-expanded="false">
+                                                  <div class="row service-package">
+                                                      <a style="width: 80%;">{{ 'Opportunities' | translate }}</a>
+                                                      <div style="width: 20%;color: #0069b3;align-self: center;margin-bottom: -5px;" class="fa-light {{navIcon}}"></div>
+                                                  </div>
+                                                  <ul class="submenu mm-collapse" [style]="getStyle_posi_sub2()">
+                                                      <li><a [routerLink]="['opportunities']">{{'All_Opportunities' | translate }}</a></li>
+                                                      <li><a [routerLink]="['sectors']">{{'Sectors' | translate }}</a></li>
+                                                      <li><a [routerLink]="['governorates']">{{'Cities' | translate }}</a></li>
+
+                                                  </ul>
+
+                                              </li>
+                                              <!-- <li><a [routerLink]="['initiatives']">{{'Initiatives' | translate }}</a> </li> -->
+
+                                          </ul>
+
+                                      </li>
+
+                                      <!-- Investor Service Center -->
+
+                                      <li class="has-dropdown mm-collapsed" aria-expanded="false">
+                                          <a>{{'Investor_Service_Center' | translate }}</a>
+                                          <ul class="submenu mm-collapse" [style]="getStyle_posi_submenu()">
+                                              <li><a [routerLink]="['agency-offices']">{{'Agency_offices' | translate }}</a></li>
+                                              <!-- <li><a [routerLink]="['oss']">{{'Oss' | translate }}</a> </li> -->
+                                              <li><a [routerLink]="['economic-zones']">{{'Economic_zones' | translate }}</a> </li>
+
+                                          </ul>
+
+                                      </li>
+
+                                      <!-- Resources -->
+                                      <li class="has-dropdown mm-collapsed" aria-expanded="false">
+                                          <a>{{'Resources' | translate }}</a>
+                                          <ul class="submenu mm-collapse" [style]="getStyle_posi_submenu()">
+                                              <li><a [routerLink]="['investment-guide']">{{'Investment_Guide' | translate }}</a></li>
+                                              <li><a [routerLink]="['incentives-schemes']">{{'Incentives_and_Schemes' | translate }}</a> </li>
+                                              <li><a [routerLink]="['reports']">{{'Reports_and_Research' | translate }}</a> </li>
+
+                                          </ul>
+
+                                      </li>
+
+                                      <!-- Media Center -->
+                                      <li class="has-dropdown mm-collapsed" aria-expanded="false">
+                                          <a>{{'Media_Center' | translate }}</a>
+                                          <ul class="submenu mm-collapse" [style]="getStyle_posi_submenu()">
+                                              <li><a [routerLink]="['news-events']">{{'News_and_Events' | translate }}</a></li>
+                                              <li><a [routerLink]="['virtual-library']">{{'Virtual_library' | translate }}</a> </li>
+                                              <li><a [routerLink]="['common-questions']">{{'Common_questions' | translate }}</a> </li>
+
+                                          </ul>
+
+                                      </li>
+
+
+
+                                      <li>
+                                          <a [routerLink]="['contact-us']">{{'Contact_us' | translate }}</a>
+                                      </li>
+
+                                  </ul>
+                              </nav>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-8 col-sm-7 col-6">
+                      <div class="header__right-wrapper d-flex justify-content-end align-items-center">
+                          <div class="header__right d-none d-lg-flex" style="padding-inline-end: 1rem;" >
+                              <button (click)="switchLanguage()" class="btn  d-flex align-items-center" style="background-image: var(--icon-world-lines); background-repeat: no-repeat;min-height: 25px;
+                              min-width: 25px;">
+                            <i class="flag-icon {{ currentLanguage }}"></i>
+                          </button>
+
+                          </div>
+                          <div class="header__bar  row d-lg-none">
+                              <div class="col-6">
+                                  <button (click)="switchLanguage()" class="btn  d-flex align-items-center">
+                              <i class="flag-icon {{ currentLanguage }}"></i>
+                              <span class="ml-1 kq-white">{{ lang1 | uppercase }}</span>
+                            </button>
+                              </div>
+                              <div class="col-6">
+                                  <button type="button" class="hamurger-btn" (click)="handleSidebar()">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                       </button>
+                              </div>
+                          </div>
+
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+
+
+<!-- offcanvas area start -->
+<div class="offcanvas__area" [class.sidebar-opened]="showSidebar">
+
+  <div class="offcanvas__wrapper">
+      <div class="offcanvas__content">
+          <div class="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
+              <div class="offcanvas__logo logo">
+                  <a [routerLink]="['home']">
+                      <img style="width: 170px;" src="assets/image/logos/Logo gia.png" alt="logo">
+                  </a>
+              </div>
+
+              <div class="offcanvas__close">
+                  <button class="offcanvas__close-btn" (click)="handleSidebarClose()">
+                  <i class="fal fa-times"></i>
+              </button>
+              </div>
+          </div>
+          <!-- <div class="offcanvas__search mb-25">
+              <form action="#">
+                  <input type="text" placeholder="What are you searching for?">
+                  <button type="submit"><i class="far fa-search"></i></button>
+              </form>
+          </div> -->
+          <div class="mobile-menu fix mb-40 mean-container">
+              <div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="right: 0px; left: auto; display: inline;"><span><span><span></span></span></span></a>
+                  <nav class="mean-nav">
+
+                      <ul style="display: none;">
+
+                          <!-- Why Yemen? -->
+                          <li class="has-dropdown">
+                              <div (click)="isCollapsed = ! isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample" style="display: flex;">
+                                  <a type="button">{{ 'Why_Yemen' | translate }}</a>
+                                  <a class="mean-expand" style="font-size: 18px">
+                                      <i class="fal fa-plus"></i>
+                                  </a>
+                              </div>
+
+                              <ul class="submenu" [(ngbCollapse)]="isCollapsed">
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed = ! isCollapsed" [routerLink]="['about-yemen']">{{ 'About_Yemen' | translate }}</a></li>
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed = ! isCollapsed" [routerLink]="['economic-profiles']">{{ 'Economic_profiles' | translate }}</a>
+                                  </li>
+
+                              </ul>
+
+                          </li>
+
+                          <!-- Our Services -->
+                          <li class="has-dropdown">
+                              <div (click)="isCollapsed2 = ! isCollapsed2" [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseExample" style="display: flex;">
+                                  <a type="button">{{ 'Our_Services' | translate }}</a>
+                                  <a class="mean-expand" style="font-size: 18px">
+                                      <i class="fal fa-plus"></i>
+                                  </a>
+                              </div>
+
+                              <ul class="submenu" [(ngbCollapse)]="isCollapsed2">
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed2 = ! isCollapsed2" [routerLink]="['service-package']">{{ 'Service_package' | translate }}</a></li>
+
+                                  <!-- Opportunities -->
+                                  <li class="has-dropdown">
+                                      <div (click)="isCollapsed2_1 = ! isCollapsed2_1" [attr.aria-expanded]="!isCollapsed2_1" aria-controls="collapseExample" style="display: flex;">
+                                          <a type="button">{{ 'Opportunities' | translate }}</a>
+                                          <a class="mean-expand" style="font-size: 18px">
+                                              <i class="fal fa-plus"></i>
+                                          </a>
+                                      </div>
+
+                                      <ul class="submenu" [(ngbCollapse)]="isCollapsed2_1">
+                                          <li><a (click)="handleSidebarClose()" (click)="isCollapsed2_1 = ! isCollapsed2_1" (click)="isCollapsed2 = ! isCollapsed2" [routerLink]="['opportunities']">{{'All_Opportunities' | translate }}</a></li>
+                                          <li><a (click)="handleSidebarClose()" (click)="isCollapsed2_1 = ! isCollapsed2_1" (click)="isCollapsed2 = ! isCollapsed2" [routerLink]="['sectors']">{{'Sectors' | translate }}</a></li>
+                                          <li><a (click)="handleSidebarClose()" (click)="isCollapsed2_1 = ! isCollapsed2_1" (click)="isCollapsed2 = ! isCollapsed2" [routerLink]="['governorates']">{{'Cities' | translate }}</a></li>
+
+                                      </ul>
+
+                                  </li>
+                                  <!-- <li><a (click)="handleSidebarClose()" (click)="isCollapsed2 = ! isCollapsed2" [routerLink]="['initiatives']">{{'Initiatives' | translate }}</a> </li> -->
+
+                              </ul>
+
+                          </li>
+
+                          <!-- Investor Service Center -->
+                          <li class="has-dropdown">
+                              <div (click)="isCollapsed1 = ! isCollapsed1" [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample" style="display: flex;">
+                                  <a type="button">{{'Investor_Service_Center' | translate }}</a>
+                                  <a class="mean-expand" style="font-size: 18px">
+                                      <i class="fal fa-plus"></i>
+                                  </a>
+                              </div>
+
+                              <ul class="submenu" [(ngbCollapse)]="isCollapsed1">
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed1 = ! isCollapsed1" [routerLink]="['agency-offices']">{{'Agency_offices' | translate }}</a></li>
+                                  <!-- <li><a (click)="handleSidebarClose()" (click)="isCollapsed1 = ! isCollapsed1" [routerLink]="['oss']">{{'Oss' | translate }}</a> </li> -->
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed1 = ! isCollapsed1" [routerLink]="['economic-zones']">{{'Economic_zones' | translate }}</a> </li>
+
+                              </ul>
+
+                          </li>
+
+                          <!-- Resources -->
+                          <li class="has-dropdown">
+                              <div (click)="isCollapsed3 = ! isCollapsed3" [attr.aria-expanded]="!isCollapsed3" aria-controls="collapseExample" style="display: flex;">
+                                  <a type="button">{{'Resources' | translate }}</a>
+                                  <a class="mean-expand" style="font-size: 18px">
+                                      <i class="fal fa-plus"></i>
+                                  </a>
+                              </div>
+
+                              <ul class="submenu" [(ngbCollapse)]="isCollapsed3">
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed3 = ! isCollapsed3" [routerLink]="['investment-guide']">{{'Investment_Guide' | translate }}</a></li>
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed3 = ! isCollapsed3"  [routerLink]="['incentives-schemes']">{{'Incentives_and_Schemes' | translate }}</a> </li>
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed3 = ! isCollapsed3"  [routerLink]="['reports']">{{'Reports_and_Research' | translate }}</a> </li>
+
+                              </ul>
+
+                          </li>
+
+                          <!-- Media Center -->
+                          <li class="has-dropdown">
+                              <div (click)="isCollapsed4 = ! isCollapsed4" [attr.aria-expanded]="!isCollapsed4" aria-controls="collapseExample" style="display: flex;">
+                                  <a type="button">{{'Media_Center' | translate }}</a>
+                                  <a class="mean-expand" style="font-size: 18px">
+                                      <i class="fal fa-plus"></i>
+                                  </a>
+                              </div>
+
+                              <ul class="submenu" [(ngbCollapse)]="isCollapsed4">
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed4 = ! isCollapsed4" [routerLink]="['news-events']">{{'News_and_Events' | translate }}</a></li>
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed4 = ! isCollapsed4" [routerLink]="['virtual-library']">{{'Virtual_library' | translate }}</a> </li>
+                                  <li><a (click)="handleSidebarClose()" (click)="isCollapsed4 = ! isCollapsed4" [routerLink]="['common-questions']">{{'Common_questions' | translate }}</a> </li>
+
+                              </ul>
+
+                          </li>
+
+                          <!-- Contact us -->
+                          <li>
+                              <a (click)="handleSidebarClose()" [routerLink]="['contact-us']">{{'Contact_us' | translate }}</a>
+                          </li>
+
+                      </ul>
+                  </nav>
+              </div>
+          </div>
+
+
+          <div class="offcanvas__contact mt-30 mb-20">
+              <h4 [innerHTML]="'contact_info'|translate"></h4>
+              <ul>
+                  <li class="d-flex align-items-center">
+                      <div class="offcanvas__contact-icon ">
+                          <i class="fal fa-map-marker-alt"></i>
+                      </div>
+                      <div class="offcanvas__contact-text">
+                          <a target="_blank" href="#" [innerHTML]="'_gia-address'|translate"></a>
+                      </div>
+                  </li>
+                  <li class="d-flex align-items-center">
+                      <div class="offcanvas__contact-icon">
+                          <i class="far fa-phone"></i>
+                      </div>
+                      <div class="offcanvas__contact-text">
+                          <a href="tel:+967-000000000">8000043</a>
+                      </div>
+                  </li>
+                  <li class="d-flex align-items-center">
+                      <div class="offcanvas__contact-icon">
+                          <i class="fal fa-envelope"></i>
+                      </div>
+                      <div class="offcanvas__contact-text">
+                          <a href="mailto:support@gmail.com">info@giay.org</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+          <div class="offcanvas__social">
+              <ul>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div (click)="handleSidebarClose()" [class.behind-nav]="showSidebar"></div>
+<!-- offcanvas area end -->
+<div (click)="handleSidebarClose()" class="body-overlay" [class.opened]="showSidebar"></div>

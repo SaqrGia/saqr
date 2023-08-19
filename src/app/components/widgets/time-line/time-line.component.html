@@ -1,0 +1,40 @@
+    <!-- ========== Start Roadmap ========== -->
+
+    <section class="roadmap">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-10 col-lg-10 ">
+              <div class="header-section  ">
+                <h2 class="title2 animate__animated animate__fadeInUp animate__delay-2s animate__fast" [innerHTML]="header"> </h2>
+                <p class="description animate__animated animate__fadeInUp animate__delay-2s " [innerHTML]="decryption"></p>
+              </div>
+            </div>
+            </div>
+           <div class="row">
+              <div class="col-md-12">
+                 <div class="roadmap-items">
+                    <ng-container *ngFor="let item  of data let i = index " >
+                           <div class="roadmap-item left animate__animated animate__delay-2s animate__fadeInUp animate__fast  "  *ngIf="i % 2 === 0">
+                       <div class="roadmap-item-inner">
+                        <h4  [innerHTML]="item?.field_investment_guide_card_titl"></h4>
+                        <p  [innerHTML]="item?.field_investment_guide_card_deta"></p>
+                       </div>
+                    </div>
+              
+                    <div class="roadmap-item right animate__animated animate__fadeInUp animate__delay-2s "  *ngIf="i % 2 !== 0">
+                       <div class="roadmap-item-inner">
+                          <h4  [innerHTML]=""> {{item?.field_investment_guide_card_titl}}</h4>
+                          <p  [innerHTML]="item?.field_investment_guide_card_deta"></p>
+                       </div>
+                    </div>
+
+                </ng-container>
+
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+  
+       <!-- ========== End Roadmap ========== -->
+    

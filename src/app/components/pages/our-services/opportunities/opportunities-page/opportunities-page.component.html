@@ -1,0 +1,122 @@
+
+<!-- <app-first-section
+[title]="'Investment_Opportunities' | translate"
+[ImageUrl]="baseUrl+page?.field_opportunity_breadcrumb_"
+></app-first-section> -->
+<div class="mt-10 ">
+    <app-map></app-map>
+</div>
+
+<!-- Page Breadcumb End -->
+<section  class="pt-4 pb-10">
+  <div class="container ">
+      <div class="">
+          <div class="row pb-4">
+
+              <div class="col-lg-6 mb-4">
+                  <div class="banner-content text-lg-start text-center">
+
+                      <div class="book-form position-absolute display-kq w-100 bg-white box-shadow p-4 pb-1 z-index1 rounded">
+                          <div class="row d-flex align-items-center justify-content-between">
+                              <div class="col-lg mb-2">
+                                  <div class="form-group">
+                                      <div class="input-box">
+                                          <!-- <label>{{'Opportunities_Cities' | translate}}</label> -->
+                                          <select class="niceSelect" [(ngModel)]="selectedGovernorate">
+                                            <option selected value="">{{'All_Cities' | translate}}</option>
+                                            <option *ngFor="let gov of governorates" [value]="gov" [innerHTML]="gov"></option>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg mb-2">
+                                  <div class="form-group">
+                                      <div class="input-box">
+                                          <!-- <label>{{'Opportunities_sector' | translate}}</label> -->
+                                          <select class="niceSelect" [(ngModel)]="selectedSector" >
+                                            <option selected value ="">{{'All_Sectors' | translate}}</option>
+                                            <option *ngFor="let sec of sectors" [value]="sec" [innerHTML]="sec"></option>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="col-lg mb-2">
+                                  <div class="form-group">
+                                      <div class="input-box">
+                                          <!-- <label>{{'Opportunities_economic_zone' | translate}}</label> -->
+                                          <select class="niceSelect" [(ngModel)]="selectedEconomicZone" >
+                                            <option selected value ="">{{'All_economic_zone' | translate}}</option>
+                                            <ng-container *ngFor="let economic of economicZone">
+                                              <option *ngIf="economic" [value]="economic" [innerHTML]="economic"></option>
+                                            </ng-container>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </div>
+                               <!--
+                              <div class="col-lg col-md-6 col-xl-2 col-6 col-lg-2 col-xxl-2 col-xl-2 mb-2">
+                                <div class="form-group">
+                                    <div class="input-box">
+                                        <input [(ngModel)]="min" type="text" name="Depart" placeholder="{{'From' | translate}}">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg col-md-6 col-xl-2 col-6 col-lg-2 col-xxl-2 col-xl-2 mb-2">
+                                <div class="form-group">
+                                    <div class="input-box">
+                                        <input  [(ngModel)]="max"  type="text" name="Return" placeholder="{{'to' | translate}}" step="any">
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-lg  mb-2">
+                                  <div class="form-group mb-0 text-center">
+                                      <a  (click)="search()" class="nir-btn w-100"><i class="fa fa-search mr-2"></i> {{'Search_now' | translate}}</a>
+                                  </div>
+                              </div> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+      </div>
+  </div>
+</section>
+
+
+
+
+<!-- opertinities starts -->
+<section class="trending-podcast-section section-padding pt-3 pb-5">
+
+<div class="row">
+
+
+    <div id="op-container" class="row">
+
+      <ng-container *ngFor="let opportunity  of filterData()  let i2 = index " >
+        <div class="col-xl-3 col-lg-4 col-m-4 col-sm-6 mb-6 mb-lg-0 card-center "  >
+            <app-opportunities [opportunityName]="opportunity?.field_opportunity_name"
+              [OpportunityCost]="opportunity?.field_opportunity_cost_as_string"
+              [OpportunityCity]="opportunity?.field_governorate" [OpportunitySector]="opportunity?.field_sector"
+              [field_opportunities_details]="opportunity?.field_opportunities_details"
+              [OpportunityCount]="opportunity?.field_number_of_opportunities"
+              [haveDownload]="opportunity?.field_detail_file"
+              [downloadUrl]="baseUrl + opportunity?.field_detail_file"
+              [JobsOpportunities]="opportunity?.field_opportunities_employment"
+              class="d-flex justify-content-center"
+              >
+
+            </app-opportunities>
+        </div>
+
+      </ng-container>
+    </div>
+
+</div>
+
+</section>
